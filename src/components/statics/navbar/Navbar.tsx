@@ -3,7 +3,7 @@ import './Navbar.css';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 
-function Navbar() {
+export default function Navbar() {
     return (
         <>
             <AppBar position="static">
