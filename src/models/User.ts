@@ -4,8 +4,7 @@ interface User {
     usuario: string;
     senha: string;
     fotoUser: string;
-    tipoUser: string;
-    postagem: string;
+    tipoUser: string
 }
 
 export default User
