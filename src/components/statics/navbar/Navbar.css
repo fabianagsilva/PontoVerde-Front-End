@@ -1,0 +1,6 @@
+.box {
+    background-color: aliceblue;
+    cursor: 'pointer';
+    display: flex;
+    justify-content: start;
+}
