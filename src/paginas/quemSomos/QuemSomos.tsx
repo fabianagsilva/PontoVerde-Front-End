@@ -1,4 +1,4 @@
-import "./Quem_somos.css";
+import "./QuemSomos.css";
 import React from 'react';
 import { Grid, Paper } from '@material-ui/core';
 import { Box } from '@mui/material';
