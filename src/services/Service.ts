@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const api = axios.create({
-    baseURL: 'https://bloggeneration.herokuapp.com'
+    baseURL: 'https://projetointegrador-dl0y.onrender.com'
 })
 
     export const cadastroUsuario = async (url: any, dados: any, setDados: any) => {
@@ -10,6 +10,6 @@ export const api = axios.create({
     }
 
     export const login = async (url: any, dados: any, setDados: any) => {
-        const resposta = await api.post(url, dados)
-        setDados(resposta.data.token)
+        const resposta = await api.post(url, dados);
+        setDados(resposta.data.token);
     }
