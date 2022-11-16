@@ -22,10 +22,10 @@ export default function Navbar() {
                         </Box>
 
                         <Box mx={1} style={{ cursor: 'pointer' }}>
-                            <Typography variant="h6" color="inherit"> Temas </Typography>
+                            <Typography variant="h6" color="inherit"> Categorias </Typography>
                         </Box>
                         <Box mx={1} style={{ cursor: 'pointer' }}>
-                            <Typography variant="h6" color="inherit"> Cadastrar Temas </Typography>
+                            <Typography variant="h6" color="inherit"> Cadastrar Categorias </Typography>
                         </Box>
 
                         <Box mx={1} style={{ cursor: 'pointer' }}>
