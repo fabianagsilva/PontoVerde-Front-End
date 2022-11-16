@@ -72,7 +72,7 @@ return (
             </Typography>
 
                 <Typography variant="body2" component="p">
-                    {post.categoria?.descricao}
+                    {post.categoria?.tipo}
                 </Typography>
             </CardContent>
             <CardActions>
