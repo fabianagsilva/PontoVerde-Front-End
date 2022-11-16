@@ -4,10 +4,10 @@ import './DeletarCategoria.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Box } from '@mui/material';
 import { buscaId, deleteId } from '../../../services/Service';
-import Tema from '../../../models/Tema';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import Categoria from '../../../models/Categoria';
 
 
 function DeletarCategoria() {
@@ -83,7 +83,7 @@ function DeletarCategoria() {
                         Deseja deletar a categoria?
                     </Typography>
                     <Typography color="textSecondary">
-                    {categoria?.descricao}
+                    {categoria?.tipo}
                     </Typography>
                     </Box>
                 </CardContent>
