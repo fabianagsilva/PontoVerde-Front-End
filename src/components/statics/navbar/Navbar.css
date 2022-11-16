@@ -4,3 +4,12 @@
     display: flex;
     justify-content: start;
 }
+
+.cursor {
+    cursor: pointer;
+    color: black;
+}
+
+.text-decorator-none {
+    text-decoration: none;
+}
