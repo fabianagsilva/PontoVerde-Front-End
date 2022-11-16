@@ -8,6 +8,7 @@ import { busca, buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import User from './../../../models/User';
 
 function CadastroPost() {
 
@@ -39,14 +40,20 @@ function CadastroPost() {
     const [categoria, setCategoria] = useState<Categoria>(
         {
             id: 0,
-            descricao: ''
+            tipo: ''
         })
     const [postagem, setPostagem] = useState<Postagem>({
         id: 0,
         titulo: '',
+        subtitulo: '',
         texto: '',
+        imagem: '',
+        autor: '',
         data: '',
-        categoria: null
+        audio: '',
+        sugestao: '',
+        categoria: null,
+        usuario: null
     })
 
     useEffect(() => { 
@@ -152,7 +159,7 @@ function CadastroPost() {
                         })}>
                             {
                             categorias.map(categoria => (
-                                <MenuItem value={categoria.id}>{categoria.descricao}</MenuItem>
+                                <MenuItem value={categoria.id}>{categoria.tipo}</MenuItem>
                             ))
                         }
                     </Select>
