@@ -6,7 +6,7 @@ import Navbar from "./components/statics/navbar/Navbar";
 import CadastroUsuario from "./paginas/cadastrar/CadastroUsuario";
 import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
-import store from "./Store/store";
+import store from "./store/store";
 
 function App() {
   return (
