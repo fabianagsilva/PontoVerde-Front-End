@@ -1,10 +1,10 @@
-import Tema from './Tema'
+import categoria from './categoria'
 
 interface Postagem{
     id: number;
     titulo: string;
     texto: string;
-    tema?: Tema| null
+    categoria?: categoria| null
 }
 
 export default Postagem;

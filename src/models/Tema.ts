@@ -1,6 +1,6 @@
-interface Tema{
+interface categoria{
     id: number;
     descricao: string;
 }
 
-export default Tema;
+export default categoria;

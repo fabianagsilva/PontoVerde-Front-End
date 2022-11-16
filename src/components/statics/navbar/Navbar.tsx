@@ -14,26 +14,22 @@ export default function Navbar() {
 
                     <Box display="flex" justifyContent="start">
                         <Box mx={1} style={{ cursor: 'pointer' }}>
-                            <Typography variant="h6" color="inherit"> Inicio </Typography>
+                            <Typography variant="h6" color="inherit"> Home </Typography>
                         </Box>
 
                         <Box mx={1} style={{ cursor: 'pointer' }}>
-                            <Typography variant="h6" color="inherit"> Nosso Objetivo </Typography>
+                            <Typography variant="h6" color="inherit"> Nosso objetivo </Typography>
                         </Box>
 
                         <Box mx={1} style={{ cursor: 'pointer' }}>
-                            <Typography variant="h6" color="inherit"> Temas </Typography>
+                            <Typography variant="h6" color="inherit"> Categorias </Typography>
                         </Box>
                         <Box mx={1} style={{ cursor: 'pointer' }}>
-                            <Typography variant="h6" color="inherit"> Cadastrar Temas </Typography>
+                            <Typography variant="h6" color="inherit"> Cadastrar categoria </Typography>
                         </Box>
 
                         <Box mx={1} style={{ cursor: 'pointer' }}>
-                            <Typography variant="h6" color="inherit"> Fazer Login </Typography>
-                            </Box>
-
-                        <Box mx={1} style={{ cursor: 'pointer' }}>
-                            <Typography variant="h6" color="inherit"> Encerrar Sessão </Typography>
+                            <Typography variant="h6" color="inherit"> Encerrar sessão </Typography>
                         </Box>
                     </Box>
                 </Toolbar>
