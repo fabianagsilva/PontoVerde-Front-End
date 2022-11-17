@@ -1,6 +1,6 @@
 .box {
     background-color: aliceblue;
-    cursor: 'pointer';
+    cursor: pointer;
     display: flex;
     justify-content: start;
 }
@@ -12,5 +12,4 @@
 
 .text-decorator-none {
     text-decoration: none;
-    color: black;
 }

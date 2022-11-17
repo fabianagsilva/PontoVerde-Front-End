@@ -59,11 +59,8 @@ function CadastroCategoria() {
   }
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-    e.preventDefault();
-    console.log("categoria " + JSON.stringify(categoria));
 
     if (id !== undefined) {
-      console.log(categoria);
       put(`/categoria`, categoria, setCategoria, {
         headers: {
           Authorization: token,

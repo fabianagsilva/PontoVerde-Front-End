@@ -25,3 +25,7 @@
     height: 95vh;
     align-items: center;
 }
+
+.text-decorator-none {
+    text-decoration: none;
+}

@@ -21,7 +21,7 @@ function TabPostagem() {
                 <AppBar position="static" className='tab'>
                     <Tabs centered indicatorColor="secondary" onChange={handleChange}>
                         <Tab label="Todas as postagens" value="1"/>
-                        <Tab label="Sobre mim" value="2" />
+                        <Tab label="Sobre nós" value="2" />
                     </Tabs>
                 </AppBar>
 

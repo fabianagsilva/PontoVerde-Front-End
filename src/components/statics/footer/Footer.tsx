@@ -16,7 +16,7 @@ function Footer() {
     var footerComponent;
 
     if (token !== "") {
-        footerComponent = 
+        footerComponent = (
         <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
                     <Box style={{ backgroundColor: "#3F51B5", height: "120px" }}>
@@ -47,6 +47,7 @@ function Footer() {
                     </Box>
                 </Grid>
             </Grid>
+        )
     }
     
     return (
