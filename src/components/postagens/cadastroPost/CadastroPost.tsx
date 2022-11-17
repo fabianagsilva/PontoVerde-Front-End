@@ -145,7 +145,16 @@ function CadastroPost() {
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro de postagem</Typography>
                 <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="Título" variant="outlined" name="titulo" margin="normal" fullWidth />
+
+                <TextField value={postagem.subtitulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="subtitulo" label="Subtítulo" variant="outlined" name="subtitulo" margin="normal" fullWidth />
+
                 <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="Texto" name="texto" variant="outlined" margin="normal" fullWidth multiline minRows={4}/>
+
+                <TextField value={postagem.imagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="imagem" label="Link de imagem" variant="outlined" name="imagem" margin="normal" fullWidth />
+
+                <TextField value={postagem.autor} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="autor" label="Autor da Postagem" variant="outlined" name="autor" margin="normal" fullWidth />
+
+                <TextField value={postagem.audio} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="audio" label="Link do áudio" variant="outlined" name="audio" margin="normal" fullWidth />
 
                 <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-helper-label">Categoria </InputLabel>
