@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid, Paper } from '@material-ui/core';
 import { Box } from '@mui/material';
 
-function quemSomos() {
+function QuemSomos() {
     return (
         <>
             <Paper>
@@ -27,4 +27,4 @@ function quemSomos() {
     );
 }
 
-export default quemSomos;
+export default QuemSomos;

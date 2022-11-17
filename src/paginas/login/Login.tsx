@@ -6,11 +6,18 @@ import useLocalStorage from 'react-use-localstorage';
 import { login } from "../../services/Service";
 import "./Login.css";
 import UserLogin from "../../models/UserLogin";
+import { toast } from "react-toastify";
+import { addToken } from "../../store/tokens/actions";
+import { useDispatch } from 'react-redux';
 
 function Login() {
   let navigate = useNavigate();
 
-  const [token, setToken] = useLocalStorage("token");
+  // const [token, setToken] = useLocalStorage("token");
+
+  const [token, setToken] = useState('')
+
+  const dispatch = useDispatch()
 
   const [userLogin, setUserLogin] = useState<UserLogin>({
     id: 0,
@@ -31,20 +38,38 @@ function Login() {
 
   useEffect(() => {
     if (token != "") {
+      dispatch(addToken(token))
       navigate("/home");
     }
   }, [token]);
 
-  async function logar(event: ChangeEvent<HTMLFormElement>) {
-    event.preventDefault();
+  async function logar(e: ChangeEvent<HTMLFormElement>) {
+    e.preventDefault();
     try {
-      await login("/usuarios/logar", userLogin, setToken);
-      alert("Usuário logado com sucesso!");
+        await login(`/usuarios/logar`, userLogin, setToken)
+        toast.success('Usuário logado com sucesso!', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+        });
     } catch (error) {
-      alert("Dados de usuario incorretos!");
+        toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+        });
     }
-  }
-
+}
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
       <Grid alignItems="center" xs={6}>

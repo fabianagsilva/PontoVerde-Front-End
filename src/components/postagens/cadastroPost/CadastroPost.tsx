@@ -71,7 +71,7 @@ function CadastroPost() {
     }, [id])
 
     async function getCategorias() {
-        await busca("/categorias", setCategorias, {
+        await busca("/categoria", setCategorias, {
             headers: {
                 'Authorization': token
             }
@@ -152,7 +152,7 @@ function CadastroPost() {
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
-                        onChange={(e) => buscaId(`/categorias/${e.target.value}`, setCategoria, {
+                        onChange={(e) => buscaId(`/categoria/${e.target.value}`, setCategoria, {
                             headers: {
                                 'Authorization': token
                             }

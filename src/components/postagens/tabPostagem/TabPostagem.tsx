@@ -4,6 +4,8 @@ import { TabContext, TabPanel } from '@material-ui/lab';
 import ListaPostagem from '../listaPostagem/ListaPostagem';
 import './TabPostagem.css';
 import { Box } from '@mui/material';
+import quemSomos from './../../../paginas/quemSomos/QuemSomos';
+import QuemSomos from './../../../paginas/quemSomos/QuemSomos';
 
 
 function TabPostagem() {
@@ -30,8 +32,9 @@ function TabPostagem() {
                 </TabPanel>
 
                 <TabPanel value="2">
-                    <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo-sobre">Quem somos</Typography>
-                    <Typography variant="body1" gutterBottom color="textPrimary" align="justify"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, facilis voluptas. Sequi illo consequatur voluptatum veniam totam, accusamus quis. Fugiat laudantium sint ullam enim hic eveniet sapiente corrupti dolore perferendis. </Typography>
+                <Box display="flex" flexWrap="wrap" justifyContent="center">
+                        <QuemSomos />
+                    </Box>
                 </TabPanel>
             </TabContext>
         </>
