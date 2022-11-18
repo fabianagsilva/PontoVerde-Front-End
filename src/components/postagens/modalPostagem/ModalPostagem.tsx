@@ -1,14 +1,13 @@
-import React from 'react'
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import { Button } from "@material-ui/core"
+import { Button } from "@material-ui/core";
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import CloseIcon from '@material-ui/icons/Close';
-import './ModalPostagem.css';
-import CadastroPost from '../cadastroPost/CadastroPost';
 import { Box, Modal } from '@mui/material';
-
+import React from 'react';
+import CadastroPost from '../cadastroPost/CadastroPost';
+import './ModalPostagem.css';
 
 function getModalStyle() {
-    const top = 50 ;
+    const top = 50;
     const left = 50;
 
     return {
@@ -16,21 +15,22 @@ function getModalStyle() {
         left: `${left}%`,
         transform: `translate(-${top}%, -${left}%)`,
     };
-    }
+}
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     paper: {
         position: 'absolute',
-        width: 400,
+        width: 900,
+        height: 500,
         backgroundColor: theme.palette.background.paper,
-        border: '2px solid #000',
-        boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
+        borderRadius: '15px',
+        boxShadow: theme.shadows[10],
+        padding: theme.spacing(2, 4, 3)
     },
 }),
 );
 
-function ModalPostagem () {
+function ModalPostagem() {
     const classes = useStyles();
     const [modalStyle] = React.useState(getModalStyle);
     const [open, setOpen] = React.useState(false);
@@ -45,11 +45,11 @@ function ModalPostagem () {
 
     const body = (
         <div style={modalStyle} className={classes.paper}>
-            <Box display="flex" justifyContent="flex-end" className="cursor">
-                <CloseIcon onClick={handleClose}/>
+            <Box display="flex" justifyContent="center" className="cursor">
+                <CloseIcon onClick={handleClose} />
             </Box>
-            
-            <CadastroPost/>
+
+            <CadastroPost />
         </div>
     );
 
@@ -71,4 +71,5 @@ function ModalPostagem () {
         </div>
     );
 }
+
 export default ModalPostagem;
