@@ -1,14 +1,18 @@
 import React, { useEffect } from 'react';
 import { Box, Button, Grid, Typography } from '@mui/material';
 import "./Home.css";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams} from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 import TabPostagem from '../../components/postagens/tabPostagem/TabPostagem';
+import ModalDelete from './../../components/postagens/modalDelete/ModalDelete';
 
 function Home() {
+
+   const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
+    (state) => state.tipoUser);
 
     let navigate = useNavigate();
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -41,7 +45,7 @@ function Home() {
                 </Box>
                 <Box display="flex" justifyContent="center">
                     <Box marginRight={1}>
-                        <ModalPostagem />
+                        {tipoUser === 'admin' && <ModalPostagem />}
                     </Box>
                     <Link to="/postagens" className='text-decorator-none'>
                     <Button variant="outlined" className="botao">Ver Postagens</Button>
