@@ -7,7 +7,7 @@ import { login } from "../../services/Service";
 import "./Login.css";
 import UserLogin from "../../models/UserLogin";
 import { toast } from "react-toastify";
-import { addToken } from "../../store/tokens/actions";
+import { addToken, addTipoUser } from "../../store/tokens/actions";
 import { useDispatch } from 'react-redux';
 
 function Login() {
@@ -17,9 +17,21 @@ function Login() {
 
   const [token, setToken] = useState('')
 
+  const [tipoUser, setTipoUser] = useState('');
+  
   const dispatch = useDispatch()
 
   const [userLogin, setUserLogin] = useState<UserLogin>({
+    id: 0,
+    nome: "",
+    usuario: "",
+    senha: "",
+    fotoUser: "",
+    tipoUser: "",
+    token: "",
+  });
+
+  const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
     id: 0,
     nome: "",
     usuario: "",
@@ -37,16 +49,32 @@ function Login() {
   }
 
   useEffect(() => {
-    if (token != "") {
+    if (token !== "") {
       dispatch(addToken(token))
       navigate("/home");
     }
   }, [token]);
 
+  /* useEffect(() => {
+    if (tipoUser !== "") {
+      dispatch(addTipoUser(tipoUser))
+      navigate("/home");
+    }
+  }, [tipoUser]);
+  */
+
+  useEffect(() => {
+    if (respUserLogin.token !== "") {
+      dispatch(addToken(respUserLogin.token))
+      dispatch(addTipoUser(respUserLogin.tipoUser))
+      navigate("/home");
+    }
+  }, [respUserLogin.token]);
+
   async function logar(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
-        await login(`/usuarios/logar`, userLogin, setToken)
+        await login(`/usuarios/logar`, userLogin, setRespUserLogin)
         toast.success('Usuário logado com sucesso!', {
             position: "top-right",
             autoClose: 3000,
@@ -70,6 +98,7 @@ function Login() {
         });
     }
 }
+
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
       <Grid alignItems="center" xs={6}>

@@ -9,6 +9,7 @@ import { Box } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import ModalDelete from './../modalDelete/ModalDelete';
 
 function ListaPostagem() {
 
@@ -88,7 +89,7 @@ return (
                     <Box mx={1}>
                     <Button variant="contained" size='small' color="secondary">
                         deletar
-                    </Button>
+                    </Button> 
                     </Box>
                 </Link>
                 </Box>

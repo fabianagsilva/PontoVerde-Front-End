@@ -15,6 +15,8 @@ function CadastroPost() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([])
+    const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
+    (state) => state.tipoUser);
 
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
@@ -140,25 +142,26 @@ function CadastroPost() {
     }
 
     return (
-        <Container className="topo">
+        <>
+        {tipoUser === 'admin' && <Container className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h4" color="textSecondary" align="center" >Formulário de cadastro de postagem</Typography>
 
                 <Box display="flex" justifyContent="center">
                     <Box className="cad-right">
-                        <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="Título" variant="outlined" name="titulo" margin="normal" fullWidth />
+                        <TextField required value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="Título" variant="outlined" name="titulo" margin="normal" fullWidth />
 
-                        <TextField value={postagem.subtitulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="subtitulo" label="Subtítulo" variant="outlined" name="subtitulo" margin="normal" fullWidth />
+                        <TextField required value={postagem.subtitulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="subtitulo" label="Subtítulo" variant="outlined" name="subtitulo" margin="normal" fullWidth />
 
-                        <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="Texto" name="texto" variant="outlined" margin="normal" fullWidth multiline minRows={5} />
+                        <TextField required value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="Texto" name="texto" variant="outlined" margin="normal" fullWidth multiline minRows={5} />
                     </Box>
 
                     <Box className="cad-left">
-                        <TextField value={postagem.imagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="imagem" label="Link de imagem" variant="outlined" name="imagem" margin="normal" fullWidth />
+                        <TextField required value={postagem.imagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="imagem" label="Link de imagem" variant="outlined" name="imagem" margin="normal" fullWidth />
 
-                        <TextField value={postagem.autor} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="autor" label="Autor da Postagem" variant="outlined" name="autor" margin="normal" fullWidth />
+                        <TextField required value={postagem.autor} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="autor" label="Autor da Postagem" variant="outlined" name="autor" margin="normal" fullWidth />
 
-                        <TextField value={postagem.audio} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="audio" label="Link do áudio" variant="outlined" name="audio" margin="normal" fullWidth />
+                        <TextField required value={postagem.audio} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="audio" label="Link do áudio" variant="outlined" name="audio" margin="normal" fullWidth />
 
                         <FormControl fullWidth>
                             <InputLabel id="demo-simple-select-helper-label">Categoria </InputLabel>
@@ -186,6 +189,8 @@ function CadastroPost() {
                 </Box>
             </form>
         </Container>
+        }
+        </>
     )
 }
 export default CadastroPost;
