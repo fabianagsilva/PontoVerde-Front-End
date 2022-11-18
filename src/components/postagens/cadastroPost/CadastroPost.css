@@ -1,4 +1,21 @@
-.topo{
+.cad-right {
+    margin-right: 20px;
+    width: 50%;
     margin-top: 20px;
 }
 
+.cad-left {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.topo {
+    margin-top: 20px;
+    height: 90%;
+    width: 90%;
+}
+
+.btn-finalizar {
+    margin-top: 30px;
+    margin-left: -100px;
+}
