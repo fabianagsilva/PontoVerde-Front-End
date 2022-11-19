@@ -1,5 +1,14 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { Grid, Typography, TextField, Button } from "@material-ui/core";
+import {
+  Grid,
+  Typography,
+  TextField,
+  Button,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from "@material-ui/core";
 import { Box } from "@mui/material";
 import "./CadastroUsuario.css";
 import { cadastroUsuario } from "../../services/Service";
@@ -61,6 +70,13 @@ function CadastroUsuario() {
     }
   }
 
+  function selectTipo(event: ChangeEvent<any>) {
+    setUser({
+      ...user,
+      tipoUser: event.target.value,
+    });
+  }
+
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
       <Grid item xs={6} className="imagem2"></Grid>
@@ -85,6 +101,7 @@ function CadastroUsuario() {
               variant="outlined"
               name="nome"
               margin="normal"
+              required
               fullWidth
             />
             <TextField
@@ -109,6 +126,7 @@ function CadastroUsuario() {
               margin="normal"
               type="password"
               placeholder="Digite pelo menos 8 caracteres"
+              required
               fullWidth
             />
             <TextField
@@ -122,16 +140,36 @@ function CadastroUsuario() {
               name="confirmarSenha"
               margin="normal"
               type="password"
+              required
               fullWidth
             />
             <TextField
               value={user.fotoUser}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              name="foto"
+              id="fotoUser"
+              name="fotoUser"
+              variant="outlined"
               label="URL da foto"
               margin="normal"
               fullWidth
             />
+
+            <FormControl fullWidth className="btn-tipo">
+              <InputLabel id="demo-simple-select-helper-label">
+                {" "}
+                Escolha o tipo de usuário:{" "}
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-helper-label"
+                id="demo-simple-select-helper"
+                value={user.tipoUser}
+                onChange={selectTipo}
+              >
+                <MenuItem value="admin">Administrador</MenuItem>
+                <MenuItem value="leitor">Leitor</MenuItem>
+              </Select>
+            </FormControl>
+
             <Box marginTop={2} textAlign="center">
               <Link to="/login" className="text-decorator-none">
                 <Button
