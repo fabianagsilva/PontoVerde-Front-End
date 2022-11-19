@@ -20,6 +20,10 @@ function ListaPostagem() {
         (state) => state.tokens
     );
 
+    const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
+        (state) => state.tipoUser
+    );
+
     useEffect(() => {
         if(token == ''){
             toast.error('Você precisa estar logado!', {
@@ -76,6 +80,8 @@ return (
                     {post.categoria?.tipo}
                 </Typography>
             </CardContent>
+           
+            {/* {tipoUser === "admin" ? ( */}
             <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
                 <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
@@ -92,8 +98,11 @@ return (
                     </Button> 
                     </Box>
                 </Link>
-                </Box>
+                </Box> 
             </CardActions>
+            {/* ) : (
+                null
+            )} */}
             </Card>
     </Box>
         ))

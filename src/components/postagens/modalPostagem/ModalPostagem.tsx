@@ -55,7 +55,7 @@ function ModalPostagem() {
 
     return (
         <div>
-            <Button
+            <Button 
                 variant="outlined"
                 className="btnModal"
                 onClick={handleOpen}>Nova Postagem</Button>

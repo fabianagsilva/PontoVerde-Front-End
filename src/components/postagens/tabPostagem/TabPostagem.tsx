@@ -4,7 +4,6 @@ import { TabContext, TabPanel } from '@material-ui/lab';
 import ListaPostagem from '../listaPostagem/ListaPostagem';
 import './TabPostagem.css';
 import { Box } from '@mui/material';
-import quemSomos from './../../../paginas/quemSomos/QuemSomos';
 import QuemSomos from './../../../paginas/quemSomos/QuemSomos';
 
 

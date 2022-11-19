@@ -43,10 +43,17 @@ function Home() {
                     <Typography variant="h3" gutterBottom component="h3" align="center" className="escritos"> Seja Bem Vindo(a)!</Typography>
                     <Typography variant="h5" gutterBottom component="h5" align="center" className="escritos"> Acompanhe as postagens do nosso feed de notícias!</Typography>
                 </Box>
+                
+                
                 <Box display="flex" justifyContent="center">
+                {/* {tipoUser === "admin" ? ( */}
                     <Box marginRight={1}>
-                        {tipoUser === 'admin' && <ModalPostagem />}
+                        <ModalPostagem />
                     </Box>
+                    {/* ) : (
+                        null
+                    )} */}
+
                     <Link to="/postagens" className='text-decorator-none'>
                     <Button variant="outlined" className="botao">Ver Postagens</Button>
                     </Link>

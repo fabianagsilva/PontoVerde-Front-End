@@ -7,9 +7,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
 import { toast } from 'react-toastify';
+import ModalPostagem from './../../postagens/modalPostagem/ModalPostagem';
 
 function Navbar() {
-
+    const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
+        (state) => state.tipoUser);
     let navigate = useNavigate();
     const dispatch = useDispatch();
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -65,6 +67,16 @@ function Navbar() {
                     <Typography variant="h6" color="inherit"> Postagens </Typography>
                 </Box>
                 </Link>
+
+                {/* {tipoUser === "admin" ? ( */}
+                <Link to="/formularioPostagem" className="text-decorator-none">
+                <Box mx={1} className= "cursor">
+                <Typography variant="h6" color="inherit"> Nova Postagem </Typography>
+                </Box>
+                </Link>
+                {/* ) : (
+                        null
+                    )} */}
 
                 <Box mx={1} className= "cursor" onClick= {goLogout}>
                     <Typography variant="h6" color="inherit"> Encerrar sessão </Typography>

@@ -74,7 +74,7 @@ function Login() {
   async function logar(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
-        await login(`/usuarios/logar`, userLogin, setRespUserLogin)
+        await login(`/usuarios/logar`, userLogin, setToken)
         toast.success('Usuário logado com sucesso!', {
             position: "top-right",
             autoClose: 3000,
