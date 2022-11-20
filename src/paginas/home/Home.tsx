@@ -56,9 +56,9 @@ function Home() {
             <Grid item xs={6}>
                 <img src="https://i.imgur.com/GDJIXMv.png" alt="Logo da página" className="imghome"/> 
             </Grid>
-            <Grid xs={12} className="postagem">
+            {/* <Grid xs={12} className="postagem">
                 <TabPostagem />
-            </Grid>
+            </Grid> */}
         </Grid>
     </>
     )
