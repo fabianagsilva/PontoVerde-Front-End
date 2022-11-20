@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {Typography, Button, Card, CardActions, CardContent } from "@material-ui/core"
+import { Grid,Typography, Button, Card, CardActions, CardContent } from "@material-ui/core"
 import './DeletarPostagem.css';
 import Postagem from '../../../models/Postagem';
 import { Box } from '@mui/material';
@@ -73,15 +73,15 @@ function DeletarPostagem() {
     }
 
     return (
-    <>
-        <Box m={2}>
-            <Card variant="outlined" >
+    <Grid className="fundo">
+        <Box m={2} >
+            <Card variant="outlined" className='card'>
                 <CardContent>
                     <Box justifyContent="center">
-                    <Typography color="textSecondary" gutterBottom>
+                    <Typography gutterBottom className="texto">
                         Deseja deletar a Postagem?
                     </Typography>
-                    <Typography color="textSecondary" >
+                    <Typography  className="texto">
                         {post?.titulo}
                     </Typography>
                     </Box>
@@ -89,12 +89,12 @@ function DeletarPostagem() {
                 <CardActions>
                     <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                     <Box mx={2}>
-                    <Button onClick={sim} variant="contained" className="botao-sim" size='large' color="primary">
+                    <Button onClick={sim} variant="contained" className="botao-sim" >
                         Sim
                     </Button>
                     </Box>
                     <Box>
-                    <Button onClick={nao} variant="contained" size='large' color="secondary">
+                    <Button onClick={nao} variant="contained" className="botao-nao">
                         Não
                     </Button>
                     </Box>
@@ -102,7 +102,7 @@ function DeletarPostagem() {
                 </CardActions>
             </Card>
         </Box>
-    </>
+    </Grid>
     );
 }
 export default DeletarPostagem;

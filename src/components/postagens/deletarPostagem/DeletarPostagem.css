@@ -1,0 +1,41 @@
+/* *{
+    overflow: hidden;
+    
+} */
+
+.botao-sim {
+    background-color: #083b23 !important;
+    color: white !important;
+    border-radius: 30vh !important;
+    width: 100px !important;
+    font-weight: bold !important;
+}
+
+.botao-nao {
+    background-color: #F68B10 !important;
+    color: white !important;
+    border-radius: 30vh !important;
+    width: 100px !important;
+    font-weight: bold !important;
+}
+
+.card {
+    width: 50vh;
+    border-radius: 10px !important;
+    margin: -50vh auto 0 !important; 
+    margin-top: 20vh !important;
+    position: relative;
+    background-color: #D7D8D7 !important;
+    
+}
+
+.texto {
+    
+    color: black !important;
+    font-weight: bold !important;
+}
+
+/* .fundo {
+    background-color: #D7D8D7 !important;
+} */
+
