@@ -1,15 +1,12 @@
-.box {
-    background-color: aliceblue;
-    cursor: pointer;
-    display: flex;
-    justify-content: start;
-}
-
 .cursor {
     cursor: pointer;
-    color: black;
+    color: orange  !important;
 }
 
 .text-decorator-none {
     text-decoration: none;
+}
+
+.navbar {
+    background-color: #EAC99C;
 }

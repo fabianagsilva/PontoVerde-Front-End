@@ -17,25 +17,24 @@ function Footer() {
 
     if (token !== "") {
         footerComponent = (
-        <Grid container direction="row" justifyContent="center" alignItems="center">
+            <Grid container direction="row" justifyContent="top" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
-                    <Box style={{ backgroundColor: "#3F51B5", height: "120px" }}>
+                    <Box style={{ backgroundColor: "#eac99c", height: "120px" }}>
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                            <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Siga-nos nas redes sociais </Typography>
+                            <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}> Confira nossas redes sociais! </Typography>
                         </Box>
+
                         <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://github.com/flrvia/PontoVerde-Front-End" target="_blank">
+                            <a href="https://github.com/Ponto-Verde" target="_blank">
                                 <GitHubIcon style={{ fontSize: 60, color: "white" }} />
                             </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                                <InstagramIcon style={{ fontSize: 60, color: "white" }} />
-                            </a>
-                            <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
+                            <a href="https://www.linkedin.com/in/thais-severo/details/projects/urn:li:fsd_profileProject:(ACoAADbbiLABdBIpHJWOBpV48bp_0mXtAAkzQJ4,1559430215)/creators/" target="_blank">
                                 <LinkedInIcon style={{ fontSize: 60, color: "white" }} />
                             </a>
                         </Box>
                     </Box>
-                    <Box style={{ backgroundColor: "#303F9F", height: "60px" }}>
+
+                    <Box style={{ backgroundColor: "#EAC99C", height: "70px" }}>
                         <Box paddingTop={1}>
                             <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >© 2020 Copyright:</Typography>
                         </Box>
@@ -46,13 +45,13 @@ function Footer() {
                         </Box>
                     </Box>
                 </Grid>
-            </Grid>
+            </Grid >
         )
     }
-    
+
     return (
         <>
-        {footerComponent}
+            {footerComponent}
         </>
     )
 }

@@ -33,52 +33,52 @@ function Navbar() {
 
     var navbarComponent;
 
-    if(token !== "") {
+    if (token !== "") {
         navbarComponent = (
-        <AppBar position="static">
-        <Toolbar variant="dense">
-            <Box className= "cursor">
-                <Typography variant="h5" color="inherit"> Ponto Verde. </Typography>
-            </Box>
+            <AppBar position="static">
+                <Toolbar variant="dense">
+                    <Box style={{ cursor: 'pointer' }}>
+                        <Typography variant="h5" color="inherit"> Ponto Verde. </Typography>
+                    </Box>
 
-            <Box display="flex" justifyContent="start">
-                <Link to="/home" className= "text-decorator-none">
-                <Box mx={1} className= "cursor">
-                    <Typography variant="h6" color="inherit"> Home </Typography>
-                </Box>
-                </Link>
+                    <Box display="flex" justifyContent="start">
+                        <Link to="/home" className="text-decorator-none">
+                            <Box mx={1} className="cursor">
+                                <Typography variant="h6" color="inherit"> Home </Typography>
+                            </Box>
+                        </Link>
 
-                <Link to="/categoria" className="text-decorator-none">
-                <Box mx={1} className= "cursor">
-                    <Typography variant="h6" color="inherit"> Categorias </Typography>
-                </Box>
-                </Link>
+                        <Link to="/categoria" className="text-decorator-none">
+                            <Box mx={1} className="cursor">
+                                <Typography variant="h6" color="inherit"> Categorias </Typography>
+                            </Box>
+                        </Link>
 
-                <Link to="/formularioCategoria" className="text-decorator-none">
-                <Box mx={1} className= "cursor">
-                    <Typography variant="h6" color="inherit"> Cadastrar categoria </Typography>
-                </Box>
-                </Link>
+                        <Link to="/formularioCategoria" className="text-decorator-none">
+                            <Box mx={1} className="cursor">
+                                <Typography variant="h6" color="inherit"> Cadastrar categoria </Typography>
+                            </Box>
+                        </Link>
 
-                <Link to="/postagens" className="text-decorator-none">
-                <Box mx={1} className= "cursor">
-                    <Typography variant="h6" color="inherit"> Postagens </Typography>
-                </Box>
-                </Link>
+                        <Link to="/postagens" className="text-decorator-none">
+                            <Box mx={1} className="cursor">
+                                <Typography variant="h6" color="inherit"> Postagens </Typography>
+                            </Box>
+                        </Link>
 
-                <Box mx={1} className= "cursor" onClick= {goLogout}>
-                    <Typography variant="h6" color="inherit"> Encerrar sessão </Typography>
-                </Box>
-                
-            </Box>
-        </Toolbar>
-    </AppBar>
+                        <Box mx={1} className="cursor" onClick={goLogout}>
+                            <Typography variant="h6" color="inherit"> Encerrar sessão </Typography>
+                        </Box>
+
+                    </Box>
+                </Toolbar>
+            </AppBar>
         )
     }
-    
+
     return (
         <>
-        {navbarComponent}
+            {navbarComponent}
         </>
     );
 };
