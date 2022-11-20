@@ -12,9 +12,11 @@ function CadastroCategoria() {
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
 
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const tokenState : any = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
-  );
+)
+const token :string = tokenState.token;
+const tipoUser :string = tokenState.tipoUser;
 
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
@@ -50,7 +52,7 @@ function CadastroCategoria() {
       },
     });
   }
-
+  
   function updatedCategoria(e: ChangeEvent<HTMLInputElement>) {
     setCategoria({
       ...categoria,
@@ -99,34 +101,34 @@ function CadastroCategoria() {
   function back() {
     navigate("/categoria");
   }
-
-  return (
-    <Container maxWidth="sm" className="topo">
-      <form onSubmit={onSubmit}>
-        <Typography
-          variant="h3"
-          color="textSecondary"
-          component="h1"
-          align="center"
-        >
-          Formulário de cadastro de Categoria
-        </Typography>
-        <TextField
-          value={categoria.tipo}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
-          id="descricao"
-          label="Descricao"
-          variant="outlined"
-          name="tipo"
-          margin="normal"
-          fullWidth
-        />
-        <Button type="submit" variant="contained">
-          Finalizar
-        </Button>
-      </form>
-    </Container>
-  );
-}
+  
+    return (
+      <Container maxWidth="sm" className="topo">
+        <form onSubmit={onSubmit}>
+          <Typography
+            variant="h3"
+            color="textSecondary"
+            component="h1"
+            align="center"
+          >
+            Formulário de cadastro de Categoria
+          </Typography>
+          <TextField
+            value={categoria.tipo}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
+            id="descricao"
+            label="Descricao"
+            variant="outlined"
+            name="tipo"
+            margin="normal"
+            fullWidth
+          />
+          <Button type="submit" variant="contained">
+            Finalizar
+          </Button>
+        </form>
+      </Container>
+    );
+  }
 
 export default CadastroCategoria;
