@@ -2,7 +2,6 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import { Grid, Typography, TextField, Button } from "@material-ui/core";
 import { Link, useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
-import useLocalStorage from 'react-use-localstorage';
 import { login } from "../../services/Service";
 import "./Login.css";
 import UserLogin from "../../models/UserLogin";
@@ -74,7 +73,7 @@ function Login() {
   async function logar(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
-        await login(`/usuarios/logar`, userLogin, setRespUserLogin)
+        await login(`/usuarios/logar`, userLogin, setToken)
         toast.success('Usuário logado com sucesso!', {
             position: "top-right",
             autoClose: 3000,

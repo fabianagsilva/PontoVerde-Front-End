@@ -1,15 +1,17 @@
 import React from 'react';
 import './Navbar.css';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
 import { toast } from 'react-toastify';
+import ModalPostagem from './../../postagens/modalPostagem/ModalPostagem';
 
 function Navbar() {
-
+    const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
+        (state) => state.tipoUser);
     let navigate = useNavigate();
     const dispatch = useDispatch();
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -35,18 +37,17 @@ function Navbar() {
 
     if (token !== "") {
         navbarComponent = (
-            <AppBar position="static">
-                <Toolbar variant="dense">
-                    <Box style={{ cursor: 'pointer' }}>
-                        <Typography variant="h5" color="inherit"> Ponto Verde. </Typography>
-                    </Box>
-
-                    <Box display="flex" justifyContent="start">
-                        <Link to="/home" className="text-decorator-none">
-                            <Box mx={1} className="cursor">
-                                <Typography variant="h6" color="inherit"> Home </Typography>
-                            </Box>
-                        </Link>
+            <AppBar position="static" className='navbar'>
+            <Toolbar variant="dense">
+                <Box className= "cursor">
+                    <Typography variant="h5" color="inherit"> <img src="https://i.imgur.com/1ppxRUw.png" alt="Logo da página" className="img"/>  </Typography>
+                </Box>
+                <Box display="flex" justifyContent="start">
+                <Link to="/home" className= "text-decorator-none">
+                <Box mx={1} className= "cursor">
+                    <Typography variant="h6" color="inherit"> Home </Typography>
+                </Box>
+                </Link>
 
                         <Link to="/categoria" className="text-decorator-none">
                             <Box mx={1} className="cursor">
@@ -66,16 +67,65 @@ function Navbar() {
                             </Box>
                         </Link>
 
-                        <Box mx={1} className="cursor" onClick={goLogout}>
-                            <Typography variant="h6" color="inherit"> Encerrar sessão </Typography>
-                        </Box>
+                {/* {tipoUser === "admin" ? ( /}
+                <Link to="/formularioPostagem" className="text-decorator-none">
+                <Box mx={1} className= "cursor">
+                <Typography variant="h6" color="inherit"> Nova Postagem </Typography>
+                </Box>
+                </Link>
+                {/ ) : (
+                        null
+                    )} */}
 
-                    </Box>
-                </Toolbar>
-            </AppBar>
+                <Box mx={1} className= "cursor" onClick= {goLogout}>
+                    <Typography variant="h6" color="inherit"> Encerrar sessão </Typography>
+                </Box >
+
+            </Box >
+            </Toolbar>
+    </AppBar>
         )
-    }
+    }else{
+        navbarComponent = (
+            <AppBar position="static" className='navbar'>
+            <Toolbar variant="dense">
+                <Box className= "cursor">
+                    <Typography variant="h5" color="inherit"> <img src="https://i.imgur.com/1ppxRUw.png" alt="Logo da página" className="img"/>  </Typography>
+                </Box>
 
+
+                <Box display="flex" justifyContent="start" className='navbart'>
+                <Link to="/home" className= "text-decorator-none">
+                <Box mx={1} className= "cursor">
+                    <Typography variant="h6" color="inherit"> inicio </Typography>
+                </Box>
+                </Link>
+
+                <Link to="/quemsomos" className="text-decorator-none">
+                <Box mx={1} className= "cursor">
+                    <Typography variant="h6" color="inherit"> quem somos </Typography>
+                </Box>
+                </Link>
+
+                <Link to="/formularioCategoria" className="text-decorator-none">
+                <Box mx={1} className= "cursor">
+                    <Typography variant="h6" color="inherit"> projeto </Typography>
+                </Box>
+                </Link>
+                </Box>
+    
+                <Box className='login'>
+                    <Link to='/login'>
+                        <Button className='btn-entrar'> Entrar </Button>
+                        </Link>
+                        <Link to='/cadastrar'>
+                        <Button className='btn-cadastrar'> Cadastre-se </Button>
+                        </Link>
+                </Box>
+            </Toolbar>
+        </AppBar>
+    )}
+    
     return (
         <>
             {navbarComponent}
