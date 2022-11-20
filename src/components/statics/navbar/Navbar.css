@@ -1,15 +1,63 @@
 .box {
-    background-color: aliceblue;
-    cursor: pointer;
-    display: flex;
-    justify-content: start;
+  background-color: aliceblue;
+  cursor: pointer;
+  display: flex;
+  justify-content: start;
 }
 
 .cursor {
-    cursor: pointer;
-    color: black;
+  cursor: pointer;
+  color: black;
 }
 
 .text-decorator-none {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.img {
+  width: 8vw !important;
+  height: 10vh !important;
+  margin-top: 0.2rem;
+}
+
+.navbart{
+    width: 50vw;
+    margin-left: 1rem;
+}
+
+.navbar {
+  background-color: #d7d8d7 !important;
+}
+
+.btn-entrar {
+  width: 10vw;
+  border-color: rgb(0, 65, 0) !important;
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(0, 65, 0) !important;
+  font-weight: 500 !important;
+  box-shadow: 7px 9px 20px -7px rgba(0, 0, 0, 0.98);
+  -webkit-box-shadow: 7px 9px 20px -7px rgba(0, 0, 0, 0.98);
+  -moz-box-shadow: 7px 9px 20px -7px rgba(0, 0, 0, 0.98);
+  border-radius: 50px !important;
+}
+
+.btn-cadastrar {
+  width: 10vw;
+  border-color: rgb(0, 65, 0) !important;
+  color: #083b23 !important;
+  background-color: rgba(0, 65, 0, 0) !important;
+  font-weight: 500 !important;
+  box-shadow: 7px 9px 20px -7px rgba(0, 0, 0, 0.98);
+  -webkit-box-shadow: 7px 9px 20px -7px rgba(0, 0, 0, 0.98);
+  -moz-box-shadow: 7px 9px 20px -7px rgba(0, 0, 0, 0.98);
+  border-radius: 50px !important;
+  border: 2px solid #083b23 !important;
+  text-decoration: none;
+}
+
+.login {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
 }
