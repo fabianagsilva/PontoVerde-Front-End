@@ -10,13 +10,13 @@ import { toast } from 'react-toastify';
 import ModalPostagem from './../../postagens/modalPostagem/ModalPostagem';
 
 function Navbar() {
-    const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
-        (state) => state.tipoUser);
     let navigate = useNavigate();
     const dispatch = useDispatch();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const tokenState : any = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     )
+    const token :string = tokenState.token;
+    const tipoUser :string = tokenState.tipoUser;
 
     function goLogout() {
         dispatch(addToken(""))
@@ -35,7 +35,7 @@ function Navbar() {
 
     var navbarComponent;
 
-    if(token !== "") {
+    if(token !== "" && token != null) {
         navbarComponent = (
             <AppBar position="static" className='navbar'>
             <Toolbar variant="dense">
@@ -67,15 +67,15 @@ function Navbar() {
                 </Box>
                 </Link>
 
-                {/* {tipoUser === "admin" ? ( /}
+                {tipoUser === "admin" ? ( 
                 <Link to="/formularioPostagem" className="text-decorator-none">
                 <Box mx={1} className= "cursor">
                 <Typography variant="h6" color="inherit"> Nova Postagem </Typography>
                 </Box>
                 </Link>
-                {/ ) : (
+                ) : (
                         null
-                    )} */}
+                    )}
 
                 <Box mx={1} className= "cursor" onClick= {goLogout}>
                     <Typography variant="h6" color="inherit"> Encerrar sessão </Typography>
