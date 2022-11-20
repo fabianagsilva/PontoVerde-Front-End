@@ -154,22 +154,6 @@ function CadastroUsuario() {
               fullWidth
             />
 
-            <FormControl fullWidth className="btn-tipo">
-              <InputLabel id="demo-simple-select-helper-label">
-                {" "}
-                Escolha o tipo de usuário:{" "}
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-helper-label"
-                id="demo-simple-select-helper"
-                value={user.tipoUser}
-                onChange={selectTipo}
-              >
-                <MenuItem value="admin">Administrador</MenuItem>
-                <MenuItem value="leitor">Leitor</MenuItem>
-              </Select>
-            </FormControl>
-
             <Box marginTop={2} textAlign="center">
               <Link to="/login" className="text-decorator-none">
                 <Button

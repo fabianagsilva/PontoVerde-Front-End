@@ -54,12 +54,16 @@ function Navbar() {
                     <Typography variant="h6" color="inherit"> Categorias </Typography>
                 </Box>
                 </Link>
-
+                
+                {tipoUser === "admin" ? (
                 <Link to="/formularioCategoria" className="text-decorator-none">
                 <Box mx={1} className= "cursor">
                     <Typography variant="h6" color="inherit"> Cadastrar categoria </Typography>
                 </Box>
                 </Link>
+                ) : (
+                    null
+                )}
 
                 <Link to="/postagens" className="text-decorator-none">
                 <Box mx={1} className= "cursor">

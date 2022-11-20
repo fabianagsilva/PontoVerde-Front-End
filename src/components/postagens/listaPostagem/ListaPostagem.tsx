@@ -54,7 +54,7 @@ return (
     <>
     {
         posts.map(post => (
-        <Box m={2} className=" ">
+        <Box m={2} className="">
             <Card variant="outlined">
             <CardContent>
                 <Typography color="textSecondary" gutterBottom>
@@ -78,8 +78,7 @@ return (
                     {post.categoria?.tipo}
                 </Typography>
             </CardContent>
-           
-            {/* {tipoUser === "admin" ? ( */}
+            {tipoUser === "admin" ? (
             <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
                 <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
@@ -98,9 +97,9 @@ return (
                 </Link>
                 </Box> 
             </CardActions>
-            {/* ) : (
+            ) : (
                 null
-            )} */}
+            )}
             </Card>
     </Box>
         ))
