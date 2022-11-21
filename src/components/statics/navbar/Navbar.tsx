@@ -7,16 +7,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
 import { toast } from 'react-toastify';
-import ModalPostagem from './../../postagens/modalPostagem/ModalPostagem';
 
 function Navbar() {
     let navigate = useNavigate();
     const dispatch = useDispatch();
-    const tokenState : any = useSelector<TokenState, TokenState["tokens"]>(
+    const token : any = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     )
-    const token :string = tokenState.token;
-    const tipoUser :string = tokenState.tipoUser;
+    const tipoUser : any = useSelector<TokenState, TokenState["tipoUser"]>(
+        (state) => state.tipoUser
+    )
 
     function goLogout() {
         dispatch(addToken(""))
