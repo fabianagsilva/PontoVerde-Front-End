@@ -1,14 +1,4 @@
-import {
-  Button,
-  Container,
-  FormControl,
-  FormHelperText,
-  InputLabel,
-  MenuItem,
-  Select,
-  TextField,
-  Typography,
-} from "@material-ui/core";
+import { Button, FormControl, FormHelperText, Grid, InputLabel, MenuItem, Select, TextField, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { ChangeEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -150,144 +140,154 @@ function CadastroPost() {
 
   return (
     <>
-     
-        <Container className="topo">
-          <form onSubmit={onSubmit}>
-            <Typography variant="h4" color="textSecondary" align="center">
-              Formulário de cadastro de postagem
-            </Typography>
+      <Grid container direction='row' justifyContent='center' alignItems='center' className="bg-post">
+        <Grid item xs={6} alignItems="center">
+          <Box className='mod-post'>
+            <Box paddingX={8}>
+              <form onSubmit={onSubmit}>
+                <Typography variant="h4" color="textSecondary" align="center">
+                  Cadastrar/ Atualizar postagem
+                </Typography>
 
-            <Box display="flex" justifyContent="center">
-              <Box className="cad-right">
-                <TextField
-                  required
-                  value={postagem.titulo}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    updatedPostagem(e)
-                  }
-                  id="titulo"
-                  label="Título"
-                  variant="outlined"
-                  name="titulo"
-                  margin="normal"
-                  fullWidth
-                />
+                <Box display="flex" justifyContent="center">
+                  <Box className="cad-right">
+                    <TextField
+                      className="label"
+                      required
+                      value={postagem.titulo}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        updatedPostagem(e)
+                      }
+                      id="titulo"
+                      label="Título"
+                      variant="outlined"
+                      name="titulo"
+                      margin="normal"
+                      fullWidth
+                    />
 
-                <TextField
-                  required
-                  value={postagem.subtitulo}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    updatedPostagem(e)
-                  }
-                  id="subtitulo"
-                  label="Subtítulo"
-                  variant="outlined"
-                  name="subtitulo"
-                  margin="normal"
-                  fullWidth
-                />
+                    <TextField
+                      className="label"
+                      required
+                      value={postagem.subtitulo}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        updatedPostagem(e)
+                      }
+                      id="subtitulo"
+                      label="Subtítulo"
+                      variant="outlined"
+                      name="subtitulo"
+                      margin="normal"
+                      fullWidth
+                    />
 
-                <TextField
-                  required
-                  value={postagem.texto}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    updatedPostagem(e)
-                  }
-                  id="texto"
-                  label="Texto"
-                  name="texto"
-                  variant="outlined"
-                  margin="normal"
-                  fullWidth
-                  multiline
-                  minRows={5}
-                />
-              </Box>
-
-              <Box className="cad-left">
-                <TextField
-                  required
-                  value={postagem.imagem}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    updatedPostagem(e)
-                  }
-                  id="imagem"
-                  label="Link de imagem"
-                  variant="outlined"
-                  name="imagem"
-                  margin="normal"
-                  fullWidth
-                />
-
-                <TextField
-                  required
-                  value={postagem.autor}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    updatedPostagem(e)
-                  }
-                  id="autor"
-                  label="Autor da Postagem"
-                  variant="outlined"
-                  name="autor"
-                  margin="normal"
-                  fullWidth
-                />
-
-                <TextField
-                  required
-                  value={postagem.audio}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    updatedPostagem(e)
-                  }
-                  id="audio"
-                  label="Link do áudio"
-                  variant="outlined"
-                  name="audio"
-                  margin="normal"
-                  fullWidth
-                />
-
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-helper-label">
-                    Categoria
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-helper-label"
-                    id="demo-simple-select-helper"
-                    onChange={(e) =>
-                      buscaId(`/categoria/${e.target.value}`, setCategoria, {
-                        headers: {
-                          Authorization: token,
-                        },
-                      })
-                    }
-                  >
-                    {categorias.map((categoria) => (
-                      <MenuItem value={categoria.id}>{categoria.tipo}</MenuItem>
-                    ))}
-                  </Select>
-                  <FormHelperText>
-                    Escolha um categoria para a postagem
-                  </FormHelperText>
-                  <Box className="btn-finalizar">
-                    <Button
-                      type="submit"
-                      variant="contained"
-                      color="primary"
-                      disabled={categoria.id === 0}
-                    >
-                      {id === undefined ? (
-                        <span>Nova postagem</span>
-                      ) : (
-                        <span>Atualizar postagem</span>
-                      )}
-                    </Button>
+                    <TextField
+                      className="label"
+                      required
+                      value={postagem.texto}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        updatedPostagem(e)
+                      }
+                      id="texto"
+                      label="Texto"
+                      name="texto"
+                      variant="outlined"
+                      margin="normal"
+                      fullWidth
+                      multiline
+                      minRows={5}
+                    />
                   </Box>
-                </FormControl>
-              </Box>
+
+                  <Box className="cad-left">
+                    <TextField
+                      className="label"
+                      required
+                      value={postagem.imagem}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        updatedPostagem(e)
+                      }
+                      id="imagem"
+                      label="Link de imagem"
+                      variant="outlined"
+                      name="imagem"
+                      margin="normal"
+                      fullWidth
+                    />
+
+                    <TextField
+                      className="label"
+                      required
+                      value={postagem.autor}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        updatedPostagem(e)
+                      }
+                      id="autor"
+                      label="Autor da Postagem"
+                      variant="outlined"
+                      name="autor"
+                      margin="normal"
+                      fullWidth
+                    />
+
+                    <TextField
+                      className="label"
+                      required
+                      value={postagem.audio}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        updatedPostagem(e)
+                      }
+                      id="audio"
+                      label="Link do áudio"
+                      variant="outlined"
+                      name="audio"
+                      margin="normal"
+                      fullWidth
+                    />
+
+                    <FormControl fullWidth>
+                      <InputLabel id="demo-simple-select-helper-label">
+                        Categoria
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-helper-label"
+                        id="demo-simple-select-helper"
+                        onChange={(e) =>
+                          buscaId(`/categoria/${e.target.value}`, setCategoria, {
+                            headers: {
+                              Authorization: token,
+                            },
+                          })
+                        }
+                      >
+                        {categorias.map((categoria) => (
+                          <MenuItem value={categoria.id}>{categoria.tipo}</MenuItem>
+                        ))}
+                      </Select>
+                      <FormHelperText>
+                        Escolha uma categoria para a postagem
+                      </FormHelperText>
+                      <Box className="btn-finalizar">
+                        <Button
+                          type="submit"
+                          variant="contained"
+                          disabled={categoria.id === 0}
+                        >
+                          {id === undefined ? (
+                            <span>Nova postagem</span>
+                          ) : (
+                            <span>Atualizar postagem</span>
+                          )}
+                        </Button>
+                      </Box>
+                    </FormControl>
+                  </Box>
+                </Box>
+              </form>
             </Box>
-          </form>
-        </Container>
+          </Box>
+        </Grid>
+      </Grid>
     </>
   );
 }
