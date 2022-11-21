@@ -12,11 +12,8 @@ import { useDispatch } from 'react-redux';
 function Login() {
   let navigate = useNavigate();
 
-  // const [token, setToken] = useLocalStorage("token");
 
   const [token, setToken] = useState('')
-
-  const [tipoUser, setTipoUser] = useState('');
   
   const dispatch = useDispatch()
 
@@ -54,14 +51,6 @@ function Login() {
     }
   }, [token]);
 
-  /* useEffect(() => {
-    if (tipoUser !== "") {
-      dispatch(addTipoUser(tipoUser))
-      navigate("/home");
-    }
-  }, [tipoUser]);
-  */
-
   useEffect(() => {
     if (respUserLogin.token !== "") {
       dispatch(addToken(respUserLogin.token))
@@ -73,7 +62,8 @@ function Login() {
   async function logar(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
-        await login(`/usuarios/logar`, userLogin, setToken)
+        await login(`/usuarios/logar`, userLogin, setRespUserLogin)
+
         toast.success('Usuário logado com sucesso!', {
             position: "top-right",
             autoClose: 3000,
@@ -96,6 +86,7 @@ function Login() {
             progress: undefined
         });
     }
+    console.log(respUserLogin)
 }
 
   return (

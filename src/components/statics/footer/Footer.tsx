@@ -1,11 +1,9 @@
 import React from 'react';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import { Typography, Box, Grid } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import "./Footer.css"
+import { Link } from 'react-router-dom';
 
 function Footer() {
 
@@ -17,42 +15,57 @@ function Footer() {
 
     if (token !== "") {
         footerComponent = (
-        <Grid container direction="row" justifyContent="center" alignItems="center" >
-                <Grid alignItems="center" item xs={12}>
-                    <Box style={{ backgroundColor: "#3F51B5", height: "120px" }}>
-                        <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                            <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Siga-nos nas redes sociais </Typography>
+            <footer>
+                <Grid className="caixa" item xs={12}>
+                        <div className="coluna1">
+                        <h2> Equipe </h2>
+                            <Typography className="typo1"> 
+                                Ana Paula Nunes <br />
+                                Fabiana Gonçalves <br />
+                                Flávia Santana <br />
+                                Letícia Silva <br /> 
+                            </Typography> 
+                            </div>
+                            <div className="coluna-2"> 
+                                <Typography className="typo2">
+                                Lidiane Martins <br />
+                                Mari Rebecca <br />
+                                Thais Severo <br />
+                            </Typography> </div>
+
+                    <Grid className="coluna2" item xs={4} >
+                        <Typography>
+                            <h2> GitHub </h2>
+                            <a href="https://github.com/Ponto-Verde"> Github </a>
+                        </Typography>
+                    </Grid>
+
+                    <Grid className="coluna3" item xs={4}>
+                        <Typography>
+                            <h2> Navegação  </h2>
+                            <Link to="/home"> Inicio  </Link>
+                            <p>  Quem somos? </p>
+                            <p>  Objetivo </p>
+                        </Typography>
+                    </Grid>
+                </Grid >
+
+                <Grid container direction="row" justifyContent="top" alignItems="center" >
+                    <Grid alignItems="center" item xs={12}>
+                        <Box style={{ backgroundColor: "#083B23", height: "36px" }}>
+                            <Box paddingTop={1}>
+                                <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} > Copyright © 2020 🌱 Ponto Verde </Typography>
+                            </Box>
                         </Box>
-                        <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://github.com/flrvia/PontoVerde-Front-End" target="_blank">
-                                <GitHubIcon style={{ fontSize: 60, color: "white" }} />
-                            </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                                <InstagramIcon style={{ fontSize: 60, color: "white" }} />
-                            </a>
-                            <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
-                                <LinkedInIcon style={{ fontSize: 60, color: "white" }} />
-                            </a>
-                        </Box>
-                    </Box>
-                    <Box style={{ backgroundColor: "#303F9F", height: "60px" }}>
-                        <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >Copyright © 2022 • </Typography>
-                        </Box>
-                        <Box>
-                            <a target="_blank" href="https://brasil.generation.org">
-                                <Typography variant="subtitle2" gutterBottom style={{ color: "white" }} align="center">Ponto Verde</Typography>
-                            </a>
-                        </Box>
-                    </Box>
+                    </Grid>
                 </Grid>
-            </Grid>
+            </footer >
         )
     }
-    
+
     return (
         <>
-        {footerComponent}
+            {footerComponent}
         </>
     )
 }

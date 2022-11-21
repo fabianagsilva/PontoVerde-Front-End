@@ -1,21 +1,37 @@
 .cad-right {
     margin-right: 20px;
-    width: 50%;
+    width: 60% !important;
     margin-top: 20px;
 }
 
 .cad-left {
-    width: 50%;
+    width: 60% !important;
     margin-top: 20px;
 }
 
-.topo {
-    margin-top: 20px;
-    height: 90%;
-    width: 90%;
+.bg-post {
+    background-color: #083b23;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.mod-post {
+    width: 900px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px 5px #083b23;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 .btn-finalizar {
     margin-top: 30px;
     margin-left: -100px;
+    color: #083b23;
+}
+
+.label {
+    background-color: #d7d8d7 !important;
 }
