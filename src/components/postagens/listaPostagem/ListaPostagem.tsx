@@ -61,9 +61,9 @@ return (
         <Box m={2} className="caixa-posts">
             <Card className='postagens'>
             <CardContent>
-                <Typography color="textSecondary" gutterBottom>
+                {/* <Typography color="textSecondary" gutterBottom>
                     Postagens
-                </Typography>
+                </Typography> */}
                 <img src={post.imagem} alt="" className='imagem-post'/>
                 <Typography variant="body2" component="p" className='post-categoria'>
                     {post.categoria?.tipo}
@@ -77,6 +77,7 @@ return (
                 <Typography variant="body2" component="p">
                     {post.texto}
                 </Typography>
+                <br />
                 <Typography variant="body2" component="p" className='nome-autor'>
                     {post.autor}
                 </Typography>
