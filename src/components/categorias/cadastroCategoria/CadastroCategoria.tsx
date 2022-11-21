@@ -1,22 +1,26 @@
-import React, { useState, useEffect, ChangeEvent } from "react";
-import { Container, Typography, TextField, Button } from "@material-ui/core";
-import "./CadastroCategoria.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { Button, Grid, TextField, Typography } from "@material-ui/core";
+import { Box } from "@mui/material";
+import { ChangeEvent, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import Categoria from "../../../models/Categoria";
 import { buscaId, post, put } from "../../../services/Service";
-import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
-import { toast } from "react-toastify";
+import "./CadastroCategoria.css";
 
 function CadastroCategoria() {
+
   let navigate = useNavigate();
+
   const { id } = useParams<{ id: string }>();
 
-  const tokenState : any = useSelector<TokenState, TokenState["tokens"]>(
+  const tokenState: any = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
-)
-const token :string = tokenState.token;
-const tipoUser :string = tokenState.tipoUser;
+  )
+  const token: string = tokenState.token;
+
+  const tipoUser: string = tokenState.tipoUser;
 
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
@@ -52,7 +56,7 @@ const tipoUser :string = tokenState.tipoUser;
       },
     });
   }
-  
+
   function updatedCategoria(e: ChangeEvent<HTMLInputElement>) {
     setCategoria({
       ...categoria,
@@ -68,7 +72,7 @@ const tipoUser :string = tokenState.tipoUser;
           Authorization: token,
         },
       });
-      toast.success("Categoria atualizado com sucesso!", {
+      toast.success("Categoria atualizad com sucesso!", {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -101,34 +105,47 @@ const tipoUser :string = tokenState.tipoUser;
   function back() {
     navigate("/categoria");
   }
-  
-    return (
-      <Container maxWidth="sm" className="topo">
-        <form onSubmit={onSubmit}>
-          <Typography
-            variant="h3"
-            color="textSecondary"
-            component="h1"
-            align="center"
-          >
-            Formulário de cadastro de Categoria
-          </Typography>
-          <TextField
-            value={categoria.tipo}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
-            id="descricao"
-            label="Descricao"
-            variant="outlined"
-            name="tipo"
-            margin="normal"
-            fullWidth
-          />
-          <Button type="submit" variant="contained">
-            Finalizar
-          </Button>
-        </form>
-      </Container>
-    );
-  }
+
+  return (
+    <Grid container direction='row' justifyContent='center' alignItems='center' className="bg-categoria">
+      <Grid item xs={6} alignItems="center">
+        <Box className='mod-categoria'>
+          <Box paddingX={20}>
+            <form onSubmit={onSubmit}>
+              <Typography
+                variant="h4"
+                color="textSecondary"
+                component="h1"
+                align="center"
+              >
+                Cadastrar/ Atualizar categoria
+              </Typography>
+              <TextField className="label"
+                value={categoria.tipo}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
+                id="descricao"
+                label="Descrição"
+                variant="outlined"
+                name="tipo"
+                margin="normal"
+                fullWidth
+              />
+              <Box marginTop={2} textAlign="center" className="btn">
+                <Link to="/categoria" className="text-decorator-none">
+                  <Button variant="contained" className="btn-cancelar">
+                    Cancelar
+                  </Button>
+                </Link>
+                <Button type="submit" variant="contained" className="btn-concluir">
+                  Concluir
+                </Button>
+              </Box>
+            </form>
+          </Box>
+        </Box>
+      </Grid>
+    </Grid>
+  );
+}
 
 export default CadastroCategoria;
