@@ -16,13 +16,11 @@ function ListaPostagem() {
     const [posts, setPosts] = useState<Postagem[]>([])
     let navigate = useNavigate();
 
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const tokenState : any = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-    );
-
-    const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
-        (state) => state.tipoUser
-    );
+    )
+    const token :string = tokenState.token;
+    const tipoUser :string = tokenState.tipoUser;
 
     useEffect(() => {
         if(token == ''){
@@ -56,7 +54,7 @@ return (
     <>
     {
         posts.map(post => (
-        <Box m={2} >
+        <Box m={2} className="">
             <Card variant="outlined">
             <CardContent>
                 <Typography color="textSecondary" gutterBottom>
@@ -80,8 +78,7 @@ return (
                     {post.categoria?.tipo}
                 </Typography>
             </CardContent>
-           
-            {/* {tipoUser === "admin" ? ( */}
+            {tipoUser === "admin" ? (
             <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
                 <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
@@ -100,9 +97,9 @@ return (
                 </Link>
                 </Box> 
             </CardActions>
-            {/* ) : (
+            ) : (
                 null
-            )} */}
+            )}
             </Card>
     </Box>
         ))

@@ -47,9 +47,11 @@ export default function Navbar() {
 
     let navigate = useNavigate();
     const dispatch = useDispatch();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const tokenState : any = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     )
+    const token :string = tokenState.token;
+    const tipoUser :string = tokenState.tipoUser;
 
     function goLogout() {
         dispatch(addToken(""))
@@ -83,7 +85,7 @@ export default function Navbar() {
     if (window.location.pathname === '/login' || window.location.pathname === '/cadastrar'){
       <></>
     }else{
-      if(token !== "") {
+      if(token !== "" && token != null) {
         
         navbarComponent = (
             <div className={classes.root} >
@@ -109,12 +111,23 @@ export default function Navbar() {
               <Link to='/categoria' className='text-decorator-none'>
               <MenuItem onClick={handleClose}>Categorias</MenuItem>
               </Link>
-              <Link to='/formularioCategoria' className='text-decorator-none'>
+              {tipoUser === "admin" ? (
+                 <Link to='/formularioCategoria' className='text-decorator-none'>
               <MenuItem onClick={handleClose}>Cadastrar Categoria</MenuItem>
               </Link>
+                ) : (
+                    null
+                )}
               <Link to='/postagens' className='text-decorator-none'>
               <MenuItem onClick={handleClose}>Postagens</MenuItem>
               </Link>
+              {tipoUser === "admin" ? ( 
+                <Link to="/formularioPostagem" className="text-decorator-none">
+                <MenuItem onClick={handleClose}>Nova Postagem</MenuItem>
+                </Link>
+                ) : (
+                        null
+                    )}
               <Link to='/quemsomos' className='text-decorator-none'>
               <MenuItem onClick={handleClose}>Sobre Nós</MenuItem>
               </Link>
