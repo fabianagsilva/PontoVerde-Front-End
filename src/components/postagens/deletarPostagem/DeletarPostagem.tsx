@@ -15,9 +15,11 @@ function DeletarPostagem() {
     const { id } = useParams<{id: string}>();
     const [post, setPosts] = useState<Postagem>()
 
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const tokenState : any = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-    );
+    )
+    const token :string = tokenState.token;
+    const tipoUser :string = tokenState.tipoUser;
 
     useEffect(() => {
         if(token == '') {
@@ -72,10 +74,13 @@ function DeletarPostagem() {
         navigate('/postagens')
     }
 
+    
+
     return (
-    <Grid className="fundo">
-        <Box m={2} >
-            <Card variant="outlined" className='card'>
+    <>
+    {tipoUser === "admin" ? (
+        <Box m={2}>
+            <Card variant="outlined" >
                 <CardContent>
                     <Box justifyContent="center">
                     <Typography gutterBottom className="texto">
@@ -102,7 +107,11 @@ function DeletarPostagem() {
                 </CardActions>
             </Card>
         </Box>
-    </Grid>
+        ) : (
+            null
+        )}
+    </>
     );
 }
+
 export default DeletarPostagem;

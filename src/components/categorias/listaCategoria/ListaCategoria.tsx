@@ -14,9 +14,9 @@ function ListaCategoria() {
     const [categoria, setCategoria] = useState<Categoria[]>([])
     let navigate = useNavigate();
 
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token : any = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-    );
+    )
 
     useEffect(() => {
         if(token == ''){
@@ -60,7 +60,6 @@ function ListaCategoria() {
                             {categoria.tipo}
                         </Typography>
                     </CardContent>
-
                     <CardActions>
                         <Box display="flex" justifyContent="center" mb={1.5} >
                             <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
