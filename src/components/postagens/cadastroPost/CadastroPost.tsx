@@ -14,6 +14,7 @@ function CadastroPost() {
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const [categorias, setCategorias] = useState<Categoria[]>([]);
+  
   const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
     (state) => state.tipoUser
   );

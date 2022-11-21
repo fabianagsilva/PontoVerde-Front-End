@@ -15,12 +15,12 @@ function CadastroCategoria() {
 
   const { id } = useParams<{ id: string }>();
 
-  const tokenState: any = useSelector<TokenState, TokenState["tokens"]>(
+  const token : any = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
-  )
-  const token: string = tokenState.token;
-
-  const tipoUser: string = tokenState.tipoUser;
+)
+const tipoUser : any = useSelector<TokenState, TokenState["tipoUser"]>(
+    (state) => state.tipoUser
+)
 
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
