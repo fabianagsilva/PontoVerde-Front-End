@@ -1,5 +1,46 @@
-.linha {
-    border-top-width: 10px;
-    border-top-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+* {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.caixa {
+    column-count: 3;
+    column-width: 100px;
+    columns: 12em;
+    column-gap: 0px;
+    background-color: #D7D8D7;
+    display: flex;
+}
+
+.coluna1 {
+    height: 200%;
+    width: 30%;
+    text-align: center;
+}
+
+.typo1 {
+    text-align: center;
+}
+
+.coluna-2{
+    text-align: center;
+}
+
+.typo2 {
+    text-align: center;
+}
+
+.coluna2 {
+    height: 100px;
+    width: 30%;
+    text-align: center;
+    float: center;
+}
+
+.coluna3 {
+    height: 100px;
+    width: 20%;
+    float: right;
+    text-align: center;
 }
