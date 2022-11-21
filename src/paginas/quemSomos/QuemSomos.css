@@ -1,3 +1,13 @@
+*{
+ 
+}
+.cardsIntegrantes{
+    width: 100vw;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
 h4 {
     font-size: 18px;
     font-family: verdana;
@@ -7,3 +17,285 @@ p {
     font-size: 14px;
     font-family: verdana;
 }
+
+.tela{
+    background-color: #D7D8D7 !important;
+}
+
+.cards{
+    padding: 1rem;
+}
+
+.icon{
+    font-size: 2.8rem !important;
+    color: white;
+}
+
+.icon2{
+    font-size: 2.5rem !important;
+    color: white;
+}
+
+.card {
+    width: 15vw;
+    height: 45vh;
+    background: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.5s;
+   }
+   
+   .card:hover {
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+    background-color: #083B23;
+   }
+   
+   .card .blob {
+    height: 10px;
+    width: 75%;
+    border-radius: 0 0 30px 30px;
+    margin: 0 auto;
+    background-color: #083B23;
+    visibility: visible;
+    transition: all 0.3s;
+   }
+   
+   .card:hover .blob {
+    height: 0;
+   }
+   
+   .card .img {
+    background-image: url(https://media-exp1.licdn.com/dms/image/D4E03AQEoAqHkJ0L_gg/profile-displayphoto-shrink_800_800/0/1667573741401?e=1674691200&v=beta&t=jPW5SHzjUaOcU-kOYVhWKumC0FaNO3MIR7h5FJzVhPU);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 8vw !important;
+    height: 15vh !important;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    border: 2px solid #083B23;
+   }
+
+   .card .imgm {
+    background-image: url(https://avatars.githubusercontent.com/u/4743242?v=4);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 8vw !important;
+    height: 15vh !important;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    border: 2px solid #083B23;
+   }
+
+   .card .imgflavia {
+    background-image: url(https://media-exp1.licdn.com/dms/image/C4D03AQHLUOfau1Y3lA/profile-displayphoto-shrink_800_800/0/1659059586778?e=1674691200&v=beta&t=ytErtle0j4AA5wI30l15t6k0zdZH6WDQ-Xi9bDisqqo);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 8vw !important;
+    height: 15vh !important;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    border: 2px solid #083B23;
+   }
+
+   .card .imga {
+    background-image: url(https://media-exp1.licdn.com/dms/image/D4D03AQHkHP29MJBaTg/profile-displayphoto-shrink_800_800/0/1664328183740?e=1674691200&v=beta&t=WDYfKluW6QNPtlzW8FeJ8ZyUgDlLTn3oW9ou7m2q0rk);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 8vw !important;
+    height: 15vh !important;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    border: 2px solid #083B23;
+   }
+
+   .card .imgt {
+    background-image: url(https://avatars.githubusercontent.com/u/112398137?v=4);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 8vw !important;
+    height: 15vh !important;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    border: 2px solid #083B23;
+   }
+
+   .card .imgf {
+    background-image: url(https://avatars.githubusercontent.com/u/106114124?v=4);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 8vw !important;
+    height: 15vh !important;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    border: 2px solid #083B23;
+   }
+   .card .imgl {
+    background-image: url(https://avatars.githubusercontent.com/u/69389376?v=4);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 8vw !important;
+    height: 15vh !important;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    border: 2px solid #083B23;
+   }
+
+   .card:hover .img {
+    width: 100% !important;
+    height: 70% !important;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    z-index: 99999;
+    border: none;
+   }
+   .card:hover .imgl {
+    width: 100% !important;
+    height: 70% !important;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    z-index: 99999;
+    border: none;
+   }
+   .card:hover .imgf {
+    width: 100% !important;
+    height: 70% !important;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    z-index: 99999;
+    border: none;
+   }
+   .card:hover .imgm {
+    width: 100% !important;
+    height: 70% !important;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    z-index: 99999;
+    border: none;
+   }
+
+   .card:hover .imgt {
+    width: 100% !important;
+    height: 70% !important;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    z-index: 99999;
+    border: none;
+   }
+
+   .card:hover .imgflavia {
+    width: 100% !important;
+    height: 70% !important;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    z-index: 99999;
+    border: none;
+   }
+   
+   .card:hover .imga {
+    width: 100% !important;
+    height: 70% !important;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    z-index: 99999;
+    border: none;
+   } 
+
+   .card h2 {
+    padding: 15px 10px;
+    font-size: 25px;
+    transition: all 0.1s;
+    z-index: -99;
+    line-height: 17px;
+   }
+
+   .card h6 {
+    margin-top: -1rem !important;
+    font-size: 0.6rem;
+    transition: all 0.1s;
+    z-index: -99;
+    line-height: 17px;
+    font-weight: 300;
+   }
+   
+   .card span {
+    font-size: 18px;
+   }
+   
+   .card:hover h2 {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+   }
+
+   .card:hover h6 {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+   }
+   
+   .card>p {
+    opacity: 0;
+    transition: all 0.75s;
+   }
+   
+   .card>p>a {
+    padding: 5px;
+   }
+   
+   .card:hover>p {
+    position: relative;
+    bottom: -10px;
+    opacity: 100;
+    transition: all 0.1s;
+   }

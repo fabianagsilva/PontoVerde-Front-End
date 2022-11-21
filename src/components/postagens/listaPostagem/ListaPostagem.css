@@ -1,0 +1,116 @@
+.imagem-post {
+    display: block;
+    margin-left: 4rem;
+    padding: 2rem;
+}
+
+.postagens {
+    width: 25vw;
+    min-height: 232px;
+    padding: 0;
+    margin: 0;
+}
+
+.titulo-post {
+    color: #004100 !important;
+    font-weight: bold !important;
+    padding: 10px;
+}
+
+.nome-autor {
+    color: #FF3D00 !important;
+    font-weight: bold !important;
+    color: rgb(201, 121, 1);
+}
+
+.post-categoria {
+    background: #56f270;
+    background: linear-gradient(to bottom, #024600, #749e6e);
+    color: #fafafa;
+    width: fit-content;
+    align-self: flex-start;
+    padding: .25em .75em;
+    border-radius: 1em;
+    font-size: .75rem;
+    margin-left: .5em;
+}
+
+.containerLista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.loader {
+    display: inline-block;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    left: 34px;
+    bottom: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    border-bottom-color: #FF3D00;
+    box-sizing: border-box;
+    animation: rotation 0.6s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+} 
+
+.botao-atualizar {
+    /* padding: 17px 40px !important; */
+    border-radius: 50px !important;
+    border: 0 !important;
+    background-color: #004100 !important;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px !important;
+    /* letter-spacing: 1.5px; */
+    text-transform: uppercase !important;
+    font-size: 15px !important;
+    transition: all .5s ease !important;
+    color: white !important;
+}
+.botao-atualizar:hover {
+    letter-spacing: 3px !important;
+    background-color: #FF3D00 !important;
+    color: hsl(0, 0%, 100%) !important;
+    box-shadow: rgb(201, 121, 1) 0px 7px 29px 0px !important;
+}
+
+.botao-deletar {
+    /* padding: 17px 40px; */
+    border-radius: 50px !important;
+    border: 0 !important;
+    background-color: #FF3D00 !important;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px !important;
+    /* letter-spacing: 1.5px; */
+    text-transform: uppercase !important;
+    font-size: 15px !important;
+    transition: all .5s ease !important;
+    color: white !important;
+}
+
+.botao-deletar:hover {
+    letter-spacing: 3px !important;
+    background-color: #004100 !important;
+    color: hsl(0, 0%, 100%) !important;
+    box-shadow: #008400 0px 7px 29px 0px !important;
+}
