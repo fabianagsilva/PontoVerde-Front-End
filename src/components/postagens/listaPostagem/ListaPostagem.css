@@ -1,8 +1,10 @@
 .imagem-post {
     display: block;
-    margin-left: 1.8rem;
-    padding: 2rem;
-    width: 14vw;
+    /* margin-left: 1.8rem;
+    padding: 2rem; */
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    width: 100%;
 }
 
 .caixa-posts {
