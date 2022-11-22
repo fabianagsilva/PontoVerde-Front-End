@@ -52,17 +52,18 @@ function ListaCategoria() {
     return (
         <>
 
-<Box className='containerLista'>
+<Box className='containerCategoria'>
     {categoria.length === 0 && <span className="loader">L &nbsp; ading</span>}
-    <div className='div-categorias'>
+
+    <div className='div-categorias'> 
         {
             categoria.map(categoria => (
             <Box m={2} className= 'caixa-categorias'>
                 <Card className='categorias'>
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom>
+                        {/* <Typography color="textSecondary" gutterBottom>
                             categoria
-                        </Typography>
+                        </Typography> */}
                         <Typography variant="h5" component="h2" className='titulo-categoria'>
                             {categoria.tipo}
                         </Typography>

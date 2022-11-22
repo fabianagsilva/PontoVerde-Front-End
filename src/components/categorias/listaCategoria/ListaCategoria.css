@@ -1,3 +1,12 @@
+.containerCategoria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #D7D8D7 !important;
+}
+
 .loader {
     display: inline-block;
     font-size: 48px;
@@ -42,10 +51,18 @@
     min-height: 200px;
     padding: 0;
     margin: 0;
+    display: flex !important;
+    flex-flow: row wrap !important;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem) !important;
+    overflow: hidden !important;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1) !important;
+    border-radius: 1em !important;
+    background: #ECE9E6 !important;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6) !important;
 }
 
 .titulo-categoria {
-    color: black !important;
+    color: black  !important;
     font-weight: bold !important;
     padding: 10px !important;
 }
