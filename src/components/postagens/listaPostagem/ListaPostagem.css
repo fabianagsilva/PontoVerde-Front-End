@@ -11,6 +11,7 @@
     flex-direction: column !important;
     align-items: center !important;
     width: 25vw;
+    margin-left: 2rem !important;
 }
 
 .div-posts {
@@ -63,9 +64,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 1rem;
-    width: 96%;
-    margin: 0 auto;
+    width: 100%;
+    background-color: #d7d8d7;
+    margin-top: 80px;
 }
 
 .loader {

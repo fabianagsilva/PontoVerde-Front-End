@@ -61,7 +61,7 @@ function ListaCategoria() {
                 <Card className='categorias'>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
-                            categoria
+                            Categoria
                         </Typography>
                         <Typography variant="h5" component="h2" className='titulo-categoria'>
                             {categoria.tipo}

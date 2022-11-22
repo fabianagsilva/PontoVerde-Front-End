@@ -99,7 +99,7 @@ export default function Navbar() {
     if (token !== "" && token != null) {
       navbarComponent = (
         <div className={classes.root}>
-          <AppBar className="navbar" position="static">
+          <AppBar className="navbar">
             <Toolbar>
             <Link to="/home">
               <Box className="cursor">
@@ -174,6 +174,9 @@ export default function Navbar() {
                   ) : null}
                   <Link to="/quemsomos" className="text-decorator-none">
                     <MenuItem onClick={handleClose}>Sobre Nós</MenuItem>
+                  </Link>
+                  <Link to="/projeto" className="text-decorator-none">
+                    <MenuItem onClick={handleClose}>Projeto</MenuItem>
                   </Link>
                   <MenuItem className="text-decorator-none" onClick={goLogout}>
                     Logout

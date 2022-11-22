@@ -34,7 +34,11 @@
 
 .navbar {
   box-shadow: 0px 1px 11px -8px rgba(0, 0, 0, 0.98) !important;
-  background-color: #d7d8d7 !important;
+  background: rgba(215, 216, 215, 0.275) !important;
+  backdrop-filter: blur(56px);
+  position: fixed !important;
+  margin-bottom: 1rem;
+  z-index: 1030;
 }
 
 .menu{

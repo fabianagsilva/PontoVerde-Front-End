@@ -16,7 +16,9 @@ function Footer() {
     if (token !== "") {
         footerComponent = (
             <footer>
-                <Grid className="caixa" item xs={12} >                
+                <hr />
+                <Grid className="caixa" item xs={12} >   
+                             
                         <Typography>
                             <h2> Equipe </h2>
                             <a href="https://beacons.ai/anapaulanunes" target="_blank"> Ana Paula Nunes </a> <br />
