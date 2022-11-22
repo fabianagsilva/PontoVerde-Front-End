@@ -110,7 +110,7 @@ const tipoUser : any = useSelector<TokenState, TokenState["tipoUser"]>(
     <Grid container direction='row' justifyContent='center' alignItems='center' className="bg-categoria">
       <Grid item xs={6} alignItems="center">
         <Box className='mod-categoria'>
-          <Box paddingX={20}>
+          <Box paddingX={4}>
             <form onSubmit={onSubmit}>
               <Typography
                 variant="h4"

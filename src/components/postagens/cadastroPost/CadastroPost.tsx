@@ -143,7 +143,7 @@ function CadastroPost() {
       <Grid container direction='row' justifyContent='center' alignItems='center' className="bg-post">
         <Grid item xs={6} alignItems="center">
           <Box className='mod-post'>
-            <Box paddingX={4}>
+            <Box paddingX={6}>
               <form onSubmit={onSubmit}>
                 <Typography variant="h4" color="textSecondary" align="center">
                   Cadastrar/ Atualizar postagem
