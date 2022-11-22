@@ -42,13 +42,22 @@
 .btn-finalizar {
     margin-top: 30px !important;
     margin-left: -100px !important;
+    letter-spacing: 3px !important;
+    background-color: #004100 !important;
+    color: hsl(0, 0%, 100%) !important;
+    border-radius: 50px !important;
+    }
+
+.btn-finalizar:disabled {
     border-radius: 50px !important;
     border: 0 !important;
+    background-color: #FF3D00 !important;
     text-transform: uppercase !important;
     font-size: 15px !important;
     transition: all .5s ease !important;
+    color: white !important;
 }
 
-.btn-finalizar:hover{
-    box-shadow: #004100 0px 7px 29px 0px !important;
+.btn-finalizar:hover {
+    box-shadow: #008400 0px 7px 29px 0px !important;
 }
