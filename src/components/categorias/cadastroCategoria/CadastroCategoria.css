@@ -1,16 +1,15 @@
-.bg-usuario{
-    background-image: url(https://i.imgur.com/7pDymrP.jpg);
-    width: 100vh; 
-    min-height: 100vh; 
-    background-size: cover; 
+.bg-categoria {
+    background-color: #083b23;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
     background-position: center;
 }
 
-.mod-usuario {
+.mod-categoria {
     width: 900px;
     padding-top: 30px;
     padding-bottom: 50px;
-    background: lightgrey;
     border: 3px inset white;
     background: #e8e8e8;
     box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;
@@ -23,38 +22,12 @@
     color: #8a8989;
 }
 
-.mod-usuario:hover {
+.mod-categoria:hover {
     transform: translateY(-5px);
     transition: all .5s ease-in-out;
 }
 
-.textos2{
-    font-weight: bold !important;
-    margin-top: 20px;
-    color: #083b23;
-}
-
-.btn {
-    margin-top: 40px !important;
-}
-
-.btn-cancelar{
-    border-radius: 50px !important;
-    border: 0 !important;
-    background-color: #FF3D00 !important;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px !important;
-    text-transform: uppercase !important;
-    font-size: 15px !important;
-    transition: all .5s ease !important;
-    color: white !important;
-    margin-right: 20px !important;
-}
-
-.btn-cancelar:hover{
-    box-shadow: #FF3D00 0px 7px 29px 0px !important;
-}
-
-.btn-cad-usu {
+.btn-concluir {
     border-radius: 50px !important;
     border: 0 !important;
     background-color: #004100  !important;
@@ -66,10 +39,7 @@
     margin-right: 20px !important;
 }
 
-.btn-cad-usu:hover{
+.btn-concluir:hover {
     box-shadow: #008400 0px 7px 29px 0px !important;
 }
 
-.label {
-    background-color: #d7d8d7 !important;
-}

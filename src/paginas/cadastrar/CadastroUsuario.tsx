@@ -1,12 +1,13 @@
-import React, { ChangeEvent, useEffect, useState } from "react";
-import { Grid, Typography, TextField, Button } from "@material-ui/core";
+import { Button, Grid, TextField, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
-import "./CadastroUsuario.css";
-import { cadastroUsuario } from "../../services/Service";
+import { ChangeEvent, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import User from "../../models/User";
+import { cadastroUsuario } from "../../services/Service";
+import "./CadastroUsuario.css";
 
 function CadastroUsuario() {
+
   let navigate = useNavigate();
 
   const [confirmarSenha, setConfirmarSenha] = useState<String>("");
@@ -61,92 +62,106 @@ function CadastroUsuario() {
     }
   }
 
+  function selectTipo(event: ChangeEvent<any>) {
+    setUser({
+      ...user,
+      tipoUser: event.target.value,
+    });
+  }
+
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
-      <Grid item xs={6} className="imagem2"></Grid>
-      <Grid item xs={6} alignItems="center">
-        <Box paddingX={20}>
-          <form onSubmit={cadastrar}>
-            <Typography
-              variant="h3"
-              gutterBottom
-              color="textPrimary"
-              component="h3"
-              align="center"
-              className="textos2"
-            >
-              Cadastre-se
-            </Typography>
-            <TextField
-              value={user.nome}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="nome"
-              label="Nome completo"
-              variant="outlined"
-              name="nome"
-              margin="normal"
-              fullWidth
-            />
-            <TextField
-              value={user.usuario}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="usuario"
-              label="Usuário (e-mail)"
-              variant="outlined"
-              name="usuario"
-              margin="normal"
-              fullWidth
-              required
-              placeholder="digite um e-mail valido"
-            />
-            <TextField
-              value={user.senha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="senha"
-              label="senha"
-              variant="outlined"
-              name="senha"
-              margin="normal"
-              type="password"
-              placeholder="Digite pelo menos 8 caracteres"
-              fullWidth
-            />
-            <TextField
-              value={confirmarSenha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                confirmarSenhaHandle(e)
-              }
-              id="confirmarSenha"
-              label="Confirmar senha"
-              variant="outlined"
-              name="confirmarSenha"
-              margin="normal"
-              type="password"
-              fullWidth
-            />
-            <TextField
-              value={user.fotoUser}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              name="foto"
-              label="URL da foto"
-              margin="normal"
-              fullWidth
-            />
-            <Box marginTop={2} textAlign="center">
-              <Link to="/login" className="text-decorator-none">
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  className="btnCancelar"
-                >
-                  Cancelar
+    <Grid container direction='row' justifyContent='center' alignItems='center' className="bg-usuario">
+      <Grid alignItems="center">
+        <Box className='mod-usuario'>
+          <Box paddingX={20}>
+            <form onSubmit={cadastrar}>
+              <Typography
+                variant="h3"
+                gutterBottom
+                component="h3"
+                align="center"
+                className="textos2"
+              >
+                Cadastre-se
+              </Typography>
+              <TextField
+                className="label"
+                value={user.nome}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                id="nome"
+                label="Nome completo"
+                variant="outlined"
+                name="nome"
+                margin="normal"
+                required
+                fullWidth
+              />
+              <TextField
+                className="label"
+                value={user.usuario}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                id="usuario"
+                label="Usuário (e-mail)"
+                variant="outlined"
+                name="usuario"
+                margin="normal"
+                fullWidth
+                required
+                placeholder="digite um e-mail valido"
+              />
+              <TextField
+                className="label"
+                value={user.senha}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                id="senha"
+                label="senha"
+                variant="outlined"
+                name="senha"
+                margin="normal"
+                type="password"
+                placeholder="Digite pelo menos 8 caracteres"
+                required
+                fullWidth
+              />
+              <TextField
+                className="label"
+                value={confirmarSenha}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  confirmarSenhaHandle(e)
+                }
+                id="confirmarSenha"
+                label="Confirmar senha"
+                variant="outlined"
+                name="confirmarSenha"
+                margin="normal"
+                type="password"
+                required
+                fullWidth
+              />
+              <TextField
+                className="label"
+                value={user.fotoUser}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                id="fotoUser"
+                name="fotoUser"
+                variant="outlined"
+                label="URL da foto"
+                margin="normal"
+                fullWidth
+              />
+
+              <Box marginTop={2} textAlign="center">
+                <Link to="/login" className="text-decorator-none">
+                  <Button variant="contained" color="secondary" className="btn-cancelar">
+                    Cancelar
+                  </Button>
+                </Link>
+                <Button type="submit" variant="contained" className="btn-cad-usu">
+                  Cadastrar
                 </Button>
-              </Link>
-              <Button type="submit" variant="contained" color="primary">
-                Cadastrar
-              </Button>
-            </Box>
-          </form>
+              </Box>
+            </form>
+          </Box>
         </Box>
       </Grid>
     </Grid>
