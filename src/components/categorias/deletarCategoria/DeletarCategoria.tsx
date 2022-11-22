@@ -16,9 +16,12 @@ function DeletarCategoria() {
     const { id } = useParams<{id: string}>();
     const [categoria, setCategoria] = useState<Categoria>()
 
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token : any = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-    );
+    )
+    const tipoUser : any = useSelector<TokenState, TokenState["tipoUser"]>(
+        (state) => state.tipoUser
+    )
 
     useEffect(() => {
         if(token == '') {
@@ -74,9 +77,10 @@ function DeletarCategoria() {
     }
 
     return (
-    <Grid>
-        <Box m={2}>
-            <Card variant="outlined" className='card'>
+        <>
+        {tipoUser === "admin" ? (
+        <Box m={2} className='caixa-deletar'>
+            <Card className='card-deletar'>
                 <CardContent>
                 <Box justifyContent="center">
                     <Typography className="texto" gutterBottom>
@@ -103,7 +107,10 @@ function DeletarCategoria() {
                 </CardActions>
             </Card>
             </Box>
-    </Grid>
+            ) : (
+                null
+            )}
+        </>
     );
 }
 export default DeletarCategoria;
