@@ -8,11 +8,24 @@
 
 .mod-usuario {
     width: 900px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 20px 5px #083b23;
     padding-top: 30px;
     padding-bottom: 50px;
+    background: lightgrey;
+    border: 3px inset white;
+    background: #e8e8e8;
+    box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;
+    transition: all .5s ease-in-out;
+    border-radius: 1.5rem;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-weight: bolder;
+    color: #8a8989;
+}
+
+.mod-usuario:hover {
+    transform: translateY(-5px);
+    transition: all .5s ease-in-out;
 }
 
 .textos2{
@@ -26,16 +39,35 @@
 }
 
 .btn-cancelar{
+    border-radius: 50px !important;
+    border: 0 !important;
+    background-color: #FF3D00 !important;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px !important;
+    text-transform: uppercase !important;
+    font-size: 15px !important;
+    transition: all .5s ease !important;
+    color: white !important;
     margin-right: 20px !important;
-    background-color: #d7d8d7 !important;
-    color: black !important;
-    font-weight: bold !important;
 }
 
-.btn-concluir {
-    background-color: #083b23 !important;
-    color: #d7d8d7 !important;
-    font-weight: bold !important;
+.btn-cancelar:hover{
+    box-shadow: #FF3D00 0px 7px 29px 0px !important;
+}
+
+.btn-cad-usu {
+    border-radius: 50px !important;
+    border: 0 !important;
+    background-color: #004100  !important;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px !important;
+    text-transform: uppercase !important;
+    font-size: 15px !important;
+    transition: all .5s ease !important;
+    color: white !important;
+    margin-right: 20px !important;
+}
+
+.btn-cad-usu:hover{
+    box-shadow: #008400 0px 7px 29px 0px !important;
 }
 
 .label {
