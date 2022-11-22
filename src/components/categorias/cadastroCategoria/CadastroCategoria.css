@@ -28,6 +28,10 @@
 }
 
 .btn-concluir {
+    background-color: #083b23 !important;
+    color: #d7d8d7 !important;
+    font-weight: bold !important;
+}
     border-radius: 50px !important;
     border: 0 !important;
     background-color: #004100  !important;

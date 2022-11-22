@@ -1,31 +1,60 @@
 .botao-sim {
-    background-color: #083b23 !important;
+    border-radius: 50px !important;
+    border: 0 !important;
+    background-color: #004100 !important;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px !important;
+    text-transform: uppercase !important;
+    font-size: 15px !important;
+    transition: all .5s ease !important;
     color: white !important;
-    border-radius: 30vh !important;
-    width: 100px !important;
-    font-weight: bold !important;
+}
+
+.botao-sim:hover {
+    letter-spacing: 3px !important;
+    background-color: #FF3D00 !important;
+    color: hsl(0, 0%, 100%) !important;
+    box-shadow: rgb(201, 121, 1) 0px 7px 29px 0px !important;
 }
 
 .botao-nao {
-    background-color: #F68B10 !important;
+    border-radius: 50px !important;
+    border: 0 !important;
+    background-color: #FF3D00 !important;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px !important;
+    text-transform: uppercase !important;
+    font-size: 15px !important;
+    transition: all .5s ease !important;
     color: white !important;
-    border-radius: 30vh !important;
-    width: 100px !important;
-    font-weight: bold !important;
 }
 
-.card {
-    width: 50vh;
-    border-radius: 10px !important;
+.botao-nao:hover {
+    letter-spacing: 3px !important;
+    background-color: #004100 !important;
+    color: hsl(0, 0%, 100%) !important;
+    box-shadow: #008400 0px 7px 29px 0px !important;
+}
+
+.card-deletar {
+    /*width: 50vh;
+    border-radius: 10px !important; */
     margin: -50vh auto 0 !important; 
     margin-top: 20vh !important;
     position: relative;
-    background-color: #D7D8D7 !important;
-    
-}
+    /* background-color: #D7D8D7 !important; */
+    width: 22vw !important;
+    min-height: 50px !important;
+    padding: 0;
+    margin: 0;
+    position: center !important;
+} 
 
 .texto {
-    
     color: black !important;
     font-weight: bold !important;
+}
+
+.caixa-deletar {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100vw !important;
 }

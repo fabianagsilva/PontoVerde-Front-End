@@ -80,8 +80,8 @@ function DeletarPostagem() {
     return (
     <>
     {tipoUser === "admin" ? (
-        <Box m={2}>
-            <Card variant="outlined" >
+        <Box m={2} className='caixa-deletar'>
+            <Card className='card-deletar' >
                 <CardContent>
                     <Box justifyContent="center">
                     <Typography gutterBottom className="texto">
@@ -93,7 +93,7 @@ function DeletarPostagem() {
                     </Box>
             </CardContent>
                 <CardActions>
-                    <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
+                    <Box display="flex" justifyContent="center" ml={1.0} mb={2} >
                     <Box mx={2}>
                     <Button onClick={sim} variant="contained" className="botao-sim" >
                         Sim
