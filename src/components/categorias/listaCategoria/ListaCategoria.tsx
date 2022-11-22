@@ -17,6 +17,9 @@ function ListaCategoria() {
     const token : any = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     )
+    const tipoUser : any = useSelector<TokenState, TokenState["tipoUser"]>(
+        (state) => state.tipoUser
+    )
 
     useEffect(() => {
         if(token == ''){
@@ -48,40 +51,50 @@ function ListaCategoria() {
 
     return (
         <>
+
+<Box className='containerLista'>
+    {categoria.length === 0 && <span className="loader">L &nbsp; ading</span>}
+    <div className='div-categorias'>
         {
             categoria.map(categoria => (
-            <Box m={2} >
-                <Card variant="outlined">
+            <Box m={2} className= 'caixa-categorias'>
+                <Card className='categorias'>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
                             categoria
                         </Typography>
-                        <Typography variant="h5" component="h2">
+                        <Typography variant="h5" component="h2" className='titulo-categoria'>
                             {categoria.tipo}
                         </Typography>
                     </CardContent>
+                    {tipoUser === "admin" ? (
                     <CardActions>
                         <Box display="flex" justifyContent="center" mb={1.5} >
                             <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
                                 <Box mx={1}>
-                                    <Button variant="contained" size='small' color="primary">
+                                    <Button variant="contained" size='small' className='btn1'>
                                         atualizar
                                     </Button>
                                 </Box>
                             </Link>
                             <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none">
                                 <Box mx={1}>
-                                    <Button variant="contained" size='small' color="secondary">
+                                    <Button variant="contained" size='small' className='btn2'>
                                         deletar
                                     </Button>
                                 </Box>
                             </Link>
                         </Box>
                     </CardActions>
+                    ) : (
+                        null
+                    )}
                 </Card>
             </Box>
             ))
         }
+        </div>
+        </Box>
         </>
     );
 

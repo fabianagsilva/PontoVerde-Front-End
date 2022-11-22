@@ -55,15 +55,16 @@ return (
 
     <Box className='containerLista'>
     {posts.length === 0 && <span className="loader">L &nbsp; ading</span>}
+    <div className='div-posts'>
     {
         posts.map(post => (
-        <Box m={2} className="">
+        <Box m={2} className="caixa-posts">
             <Card className='postagens'>
             <CardContent>
-                <Typography color="textSecondary" gutterBottom>
+                {/* <Typography color="textSecondary" gutterBottom>
                     Postagens
-                </Typography>
-                <img src={post.imagem} alt="" width='200px' height='200px' className='imagem-post'/>
+                </Typography> */}
+                <img src={post.imagem} alt="" className='imagem-post'/>
                 <Typography variant="body2" component="p" className='post-categoria'>
                     {post.categoria?.tipo}
                 </Typography>
@@ -76,6 +77,7 @@ return (
                 <Typography variant="body2" component="p">
                     {post.texto}
                 </Typography>
+                <br />
                 <Typography variant="body2" component="p" className='nome-autor'>
                     {post.autor}
                 </Typography>
@@ -108,7 +110,7 @@ return (
             </Card>
     </Box>
         ))
-    }
+    }</div>
     </Box>
     </>
     )

@@ -90,8 +90,9 @@ function Login() {
 }
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
-      <Grid alignItems="center" xs={6}>
+    <Grid container direction="row" justifyContent="center" alignItems="center" className="fundoLogin">
+      <Grid alignItems="center">
+        <Box className="mod-login">
         <Box paddingX={20}>
           <form onSubmit={logar}>
             <Typography
@@ -124,7 +125,7 @@ function Login() {
               fullWidth
             />
             <Box marginTop={2} textAlign="center">
-                <Button type="submit" variant="contained" color="primary">
+                <Button type="submit" variant="contained" color="primary" className="botao-entrar">
                   Entrar
                 </Button>
             </Box>
@@ -132,7 +133,7 @@ function Login() {
           
           <Box display="flex" justifyContent="center" marginTop={2}>
             <Box marginRight={1}>
-              <Typography variant="subtitle1" gutterBottom align="center">
+              <Typography variant="subtitle1" gutterBottom align="center" className="textos1">
                 Não tem uma conta?
               </Typography>
             </Box>
@@ -150,8 +151,9 @@ function Login() {
           </Box>
           </Box>
         </Box>
+        </Box>
       </Grid>
-      <Grid xs={6} className="imagem"></Grid>
+      {/* <Grid xs={6} className="fundoLogin"></Grid> */}
     </Grid>
   );
 }

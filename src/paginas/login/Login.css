@@ -1,17 +1,57 @@
 .textos1 {
     font-weight: bold !important;
+    color: black !important;
 }
 
-.imagem {
-    background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
+.fundoLogin {
+    background-image: url(https://i.imgur.com/vJBVIUr.jpg);
     background-repeat: no-repeat;
     width: 100vh; 
     min-height: 100vh; 
     background-size: cover; 
     background-position: center;
-    
+}
+
+.mod-login {
+    width: 600px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background: lightgrey;
+    border: 3px inset white;
+    background: #e8e8e8;
+    box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;
+    transition: all .5s ease-in-out;
+    border-radius: 1.5rem;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-weight: bolder;
+    color: #8a8989;
+}
+
+.mod-login:hover {
+    transform: translateY(-5px);
+    transition: all .5s ease-in-out;
 }
 
 .text-decorator-none {
     text-decoration: none;
+}
+
+.botao-entrar {
+    border-radius: 50px !important;
+    border: 0 !important;
+    background-color: #FF3D00 !important;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px !important;
+    text-transform: uppercase !important;
+    font-size: 15px !important;
+    transition: all .5s ease !important;
+    color: white !important;
+}
+
+.botao-entrar:hover {
+    letter-spacing: 3px !important;
+    background-color: #004100 !important;
+    color: hsl(0, 0%, 100%) !important;
+    box-shadow: #008400 0px 7px 29px 0px !important;
 }

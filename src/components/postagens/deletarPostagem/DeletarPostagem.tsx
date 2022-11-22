@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {Typography, Button, Card, CardActions, CardContent } from "@material-ui/core"
+import { Grid,Typography, Button, Card, CardActions, CardContent } from "@material-ui/core"
 import './DeletarPostagem.css';
 import Postagem from '../../../models/Postagem';
 import { Box } from '@mui/material';
@@ -15,11 +15,12 @@ function DeletarPostagem() {
     const { id } = useParams<{id: string}>();
     const [post, setPosts] = useState<Postagem>()
 
-    const tokenState : any = useSelector<TokenState, TokenState["tokens"]>(
+    const token : any = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     )
-    const token :string = tokenState.token;
-    const tipoUser :string = tokenState.tipoUser;
+    const tipoUser : any = useSelector<TokenState, TokenState["tipoUser"]>(
+        (state) => state.tipoUser
+    )
 
     useEffect(() => {
         if(token == '') {
@@ -79,27 +80,27 @@ function DeletarPostagem() {
     return (
     <>
     {tipoUser === "admin" ? (
-        <Box m={2}>
-            <Card variant="outlined" >
+        <Box m={2} className='caixa-deletar'>
+            <Card className='card-deletar' >
                 <CardContent>
                     <Box justifyContent="center">
-                    <Typography color="textSecondary" gutterBottom>
+                    <Typography gutterBottom className="texto">
                         Deseja deletar a Postagem?
                     </Typography>
-                    <Typography color="textSecondary" >
+                    <Typography  className="texto">
                         {post?.titulo}
                     </Typography>
                     </Box>
             </CardContent>
                 <CardActions>
-                    <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
+                    <Box display="flex" justifyContent="center" ml={1.0} mb={2} >
                     <Box mx={2}>
-                    <Button onClick={sim} variant="contained" className="botao-sim" size='large' color="primary">
+                    <Button onClick={sim} variant="contained" className="botao-sim" >
                         Sim
                     </Button>
                     </Box>
                     <Box>
-                    <Button onClick={nao} variant="contained" size='large' color="secondary">
+                    <Button onClick={nao} variant="contained" className="botao-nao">
                         Não
                     </Button>
                     </Box>

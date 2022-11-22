@@ -1,7 +1,22 @@
 .imagem-post {
     display: block;
-    margin-left: 4rem;
-    padding: 2rem;
+    /* margin-left: 1.8rem;
+    padding: 2rem; */
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.caixa-posts {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 25vw;
+}
+
+.div-posts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .postagens {
@@ -9,12 +24,21 @@
     min-height: 232px;
     padding: 0;
     margin: 0;
+
+    display: flex !important;
+    flex-flow: row wrap !important;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem) !important;
+    overflow: hidden !important;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1) !important;
+    border-radius: 1em !important;
+    background: #ECE9E6 !important;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6) !important;
 }
 
 .titulo-post {
-    color: #004100 !important;
+    color: black !important;
     font-weight: bold !important;
-    padding: 10px;
+    padding: 10px !important;
 }
 
 .nome-autor {

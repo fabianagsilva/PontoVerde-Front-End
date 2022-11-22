@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Grid, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './DeletarCategoria.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Box } from '@mui/material';
@@ -16,9 +16,12 @@ function DeletarCategoria() {
     const { id } = useParams<{id: string}>();
     const [categoria, setCategoria] = useState<Categoria>()
 
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token : any = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-    );
+    )
+    const tipoUser : any = useSelector<TokenState, TokenState["tipoUser"]>(
+        (state) => state.tipoUser
+    )
 
     useEffect(() => {
         if(token == '') {
@@ -74,15 +77,16 @@ function DeletarCategoria() {
     }
 
     return (
-    <>
-        <Box m={2}>
-            <Card variant="outlined">
+        <>
+        {tipoUser === "admin" ? (
+        <Box m={2} className='caixa-deletar'>
+            <Card className='card-deletar'>
                 <CardContent>
                 <Box justifyContent="center">
-                    <Typography color="textSecondary" gutterBottom>
+                    <Typography className="texto" gutterBottom>
                         Deseja deletar a categoria?
                     </Typography>
-                    <Typography color="textSecondary">
+                    <Typography className="texto">
                     {categoria?.tipo}
                     </Typography>
                     </Box>
@@ -90,12 +94,12 @@ function DeletarCategoria() {
                 <CardActions>
                     <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                     <Box mx={2}>
-                        <Button onClick={sim} variant="contained" size='large'>
+                        <Button onClick={sim} variant="contained" className="botao-sim">
                             Sim
                         </Button>
                     </Box>
                     <Box mx={2}>
-                        <Button onClick={nao} variant="contained" size='large' color="secondary">
+                        <Button onClick={nao} variant="contained" className="botao-nao">
                             Não
                         </Button>
                     </Box>
@@ -103,7 +107,10 @@ function DeletarCategoria() {
                 </CardActions>
             </Card>
             </Box>
-    </>
+            ) : (
+                null
+            )}
+        </>
     );
 }
 export default DeletarCategoria;

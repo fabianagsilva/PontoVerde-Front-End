@@ -19,19 +19,45 @@
 
 .mod-post {
     width: 900px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 5px 5px 20px 5px #083b23;
     padding-top: 30px;
     padding-bottom: 50px;
+    background: lightgrey;
+    border: 3px inset white;
+    background: #e8e8e8;
+    box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;
+    transition: all .5s ease-in-out;
+    border-radius: 1.5rem;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-weight: bolder;
+    color: #8a8989;
+}
+
+.mod-post:hover {
+    transform: translateY(-5px);
+    transition: all .5s ease-in-out;
 }
 
 .btn-finalizar {
-    margin-top: 30px;
-    margin-left: -100px;
-    color: #083b23;
+    margin-top: 30px !important;
+    margin-left: -100px !important;
+    letter-spacing: 3px !important;
+    background-color: #004100 !important;
+    color: hsl(0, 0%, 100%) !important;
+    border-radius: 50px !important;
+    }
+
+.btn-finalizar:disabled {
+    border-radius: 50px !important;
+    border: 0 !important;
+    background-color: #FF3D00 !important;
+    text-transform: uppercase !important;
+    font-size: 15px !important;
+    transition: all .5s ease !important;
+    color: white !important;
 }
 
-.label {
-    background-color: #d7d8d7 !important;
+.btn-finalizar:hover {
+    box-shadow: #008400 0px 7px 29px 0px !important;
 }

@@ -14,7 +14,7 @@ function CadastroPost() {
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const [categorias, setCategorias] = useState<Categoria[]>([]);
-  
+
   const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
     (state) => state.tipoUser
   );
@@ -267,8 +267,9 @@ function CadastroPost() {
                       <FormHelperText>
                         Escolha uma categoria para a postagem
                       </FormHelperText>
-                      <Box className="btn-finalizar">
+                      <Box>
                         <Button
+                          className="btn-finalizar"
                           type="submit"
                           variant="contained"
                           disabled={categoria.id === 0}
@@ -286,8 +287,8 @@ function CadastroPost() {
               </form>
             </Box>
           </Box>
-        </Grid>
-      </Grid>
+        </Grid >
+      </Grid >
     </>
   );
 }
