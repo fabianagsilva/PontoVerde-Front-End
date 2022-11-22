@@ -8,6 +8,7 @@ import UserLogin from "../../models/UserLogin";
 import { toast } from "react-toastify";
 import { addToken, addTipoUser } from "../../store/tokens/actions";
 import { useDispatch } from 'react-redux';
+import SetaVoltarIcone from '@mui/icons-material/ArrowBack';
 
 function Login() {
   let navigate = useNavigate();
@@ -92,6 +93,9 @@ function Login() {
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center" className="fundoLogin">
       <Grid alignItems="center">
+      <Link to='/'>
+      <SetaVoltarIcone className="seta"/>
+      </Link>
         <Box className="mod-login">
         <Box paddingX={20}>
           <form onSubmit={logar}>
