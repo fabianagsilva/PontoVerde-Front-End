@@ -16,36 +16,40 @@ function Footer() {
     if (token !== "") {
         footerComponent = (
             <footer>
-                <Grid className="caixa" item xs={12}>
-                        <div className="coluna1">
-                        <h2> Equipe </h2>
-                            <Typography className="typo1"> 
-                                Ana Paula Nunes <br />
-                                Fabiana Gonçalves <br />
-                                Flávia Santana <br />
-                                Letícia Silva <br /> 
-                            </Typography> 
-                            </div>
-                            <div className="coluna-2"> 
-                                <Typography className="typo2">
-                                Lidiane Martins <br />
-                                Mari Rebecca <br />
-                                Thais Severo <br />
-                            </Typography> </div>
-
-                    <Grid className="coluna2" item xs={4} >
+                <Grid className="corfundo"></Grid>
+                            <hr></hr>
+                <Grid className="caixa" item xs={12} >                
                         <Typography>
-                            <h2> GitHub </h2>
-                            <a href="https://github.com/Ponto-Verde"> Github </a>
+                            <h2> Equipe </h2>
+                            Ana Paula Nunes <br />
+                            Fabiana Gonçalves <br />
+                            Flávia Santana <br />
+                            Letícia Silva <br />
+                        </Typography>
+                        
+                    <Grid item xs={2}>
+                        <Typography>
+                            <h2 className='invisivel'> - </h2>
+                            Lidiane Martins <br />
+                            Mari Rebecca <br />
+                            Thais Severo <br />
                         </Typography>
                     </Grid>
 
-                    <Grid className="coluna3" item xs={4}>
+                    <Grid item xs={3} >
+                        <Typography>
+                            <h2> GitHub </h2>
+                            <Typography> <a href="https://github.com/flrvia/PontoVerde-Front-End" target="_blank"> Repositório</a> • Front-end </Typography>
+                            <Typography> <a href='https://github.com/thaissevero/Projeto_Integrador_Backend' target="_blank"> Repositório</a> • Back-end </Typography>
+                        </Typography>
+                    </Grid>
+
+                    <Grid >
                         <Typography>
                             <h2> Navegação  </h2>
-                            <Link to="/home"> Inicio  </Link>
-                            <p>  Quem somos? </p>
-                            <p>  Objetivo </p>
+                            <Typography> • <Link to="/home" target="_blank">Inicio</Link></Typography>
+                            <Typography> • <Link to="/quemsomos" target="_blank">Quem somos</Link></Typography>
+                            <Typography> • <Link to="/projetos" target="_blank">Objetivo</Link></Typography>
                         </Typography>
                     </Grid>
                 </Grid >
@@ -54,7 +58,7 @@ function Footer() {
                     <Grid alignItems="center" item xs={12}>
                         <Box style={{ backgroundColor: "#083B23", height: "36px" }}>
                             <Box paddingTop={1}>
-                                <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} > Copyright © 2020 🌱 Ponto Verde </Typography>
+                                <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} > Copyright © 2022 🌱 Ponto Verde </Typography>
                             </Box>
                         </Box>
                     </Grid>

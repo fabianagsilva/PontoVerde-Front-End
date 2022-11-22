@@ -5,42 +5,31 @@
 }
 
 .caixa {
-    column-count: 3;
-    column-width: 100px;
-    columns: 12em;
-    column-gap: 0px;
-    background-color: #D7D8D7;
     display: flex;
+    gap: 4rem;
+    background-color: #D7D8D7;
+    justify-content: center;
+    padding-bottom: 12px;
 }
 
-.coluna1 {
-    height: 200%;
-    width: 30%;
-    text-align: center;
+.invisivel {
+    text-indent: -9999px;
+    white-space: nowrap;  
+    color: transparent;
 }
 
-.typo1 {
-    text-align: center;
+hr {
+    justify-content: center;
+    width: 50%;
+    color: #D7D8D7;
 }
 
-.coluna-2{
-    text-align: center;
+a {
+    font-weight: bold;
+    color: #083B23;
+    text-decoration: none;
 }
 
-.typo2 {
-    text-align: center;
-}
-
-.coluna2 {
-    height: 100px;
-    width: 30%;
-    text-align: center;
-    float: center;
-}
-
-.coluna3 {
-    height: 100px;
-    width: 20%;
-    float: right;
-    text-align: center;
+a:hover {
+    color: #076005;
 }
