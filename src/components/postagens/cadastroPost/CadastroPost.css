@@ -19,9 +19,9 @@
 }
 
 .mod-post {
-    width: 900px;
+    width: 50vw;
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     background: lightgrey;
     border: 3px inset white;
     background: #e8e8e8;
@@ -41,8 +41,9 @@
 }
 
 .btn-finalizar {
-    margin-top: 30px !important;
-    margin-left: -100px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    margin-top: 20px !important;
     letter-spacing: 3px !important;
     background-color: #004100 !important;
     color: hsl(0, 0%, 100%) !important;

@@ -143,7 +143,7 @@ function CadastroPost() {
       <Grid container direction='row' justifyContent='center' alignItems='center' className="bg-post">
         <Grid item xs={6} alignItems="center">
           <Box className='mod-post'>
-            <Box paddingX={8}>
+            <Box paddingX={6}>
               <form onSubmit={onSubmit}>
                 <Typography variant="h4" color="textSecondary" align="center">
                   Cadastrar/ Atualizar postagem
@@ -267,7 +267,10 @@ function CadastroPost() {
                       <FormHelperText>
                         Escolha uma categoria para a postagem
                       </FormHelperText>
-                      <Box>
+                     
+                    </FormControl>
+                  </Box>
+                </Box>
                         <Button
                           className="btn-finalizar"
                           type="submit"
@@ -280,10 +283,6 @@ function CadastroPost() {
                             <span>Atualizar postagem</span>
                           )}
                         </Button>
-                      </Box>
-                    </FormControl>
-                  </Box>
-                </Box>
               </form>
             </Box>
           </Box>

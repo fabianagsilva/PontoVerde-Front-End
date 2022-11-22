@@ -56,7 +56,7 @@ function CadastroUsuario() {
         alert("Falha interna ao cadastrar!");
       }
     } else {
-      alert("As senhas não conferem. Favor verificar novamente!");
+      alert("As senhas não conferem. Tente novamente!");
       setUser({ ...user, senha: " " });
       setConfirmarSenha(" ");
     }
@@ -73,7 +73,7 @@ function CadastroUsuario() {
     <Grid container direction='row' justifyContent='center' alignItems='center' className="bg-usuario">
       <Grid alignItems="center">
         <Box className='mod-usuario'>
-          <Box paddingX={20}>
+          <Box paddingX={6}>
             <form onSubmit={cadastrar}>
               <Typography
                 variant="h3"
@@ -107,19 +107,19 @@ function CadastroUsuario() {
                 margin="normal"
                 fullWidth
                 required
-                placeholder="digite um e-mail valido"
+                placeholder="Digite um e-mail válido"
               />
               <TextField
                 className="label"
                 value={user.senha}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                 id="senha"
-                label="senha"
+                label="Senha"
                 variant="outlined"
                 name="senha"
                 margin="normal"
                 type="password"
-                placeholder="Digite pelo menos 8 caracteres"
+                placeholder="A senha deve conter no mínimo 8 caracteres"
                 required
                 fullWidth
               />
