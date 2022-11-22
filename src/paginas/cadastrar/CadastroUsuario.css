@@ -1,5 +1,5 @@
 .bg-usuario{
-    background-image: url(https://i.imgur.com/7pDymrP.jpg);
+    background-color: #083b23;
     width: 100vh; 
     min-height: 100vh; 
     background-size: cover; 
@@ -7,9 +7,9 @@
 }
 
 .mod-usuario {
-    width: 900px;
+    width: 50vw;
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     background: lightgrey;
     border: 3px inset white;
     background: #e8e8e8;
@@ -72,4 +72,5 @@
 
 .label {
     background-color: #d7d8d7 !important;
+    
 }

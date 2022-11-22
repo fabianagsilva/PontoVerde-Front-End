@@ -99,15 +99,19 @@ export default function Navbar() {
     if (token !== "" && token != null) {
       navbarComponent = (
         <div className={classes.root}>
-          <AppBar className="navbar" position="static">
+          <AppBar className="navbar">
             <Toolbar>
-              <Typography className="classes.title" variant="h6" noWrap>
-                <img
-                  src="https://i.imgur.com/1ppxRUw.png"
-                  alt="Logo da página"
-                  className="img"
-                />
-              </Typography>
+            <Link to="/home">
+              <Box className="cursor">
+                <Typography variant="h5" color="inherit">
+                  <img
+                    src="https://i.imgur.com/1ppxRUw.png"
+                    alt="Logo da página"
+                    className="img-deslogado"
+                  />{" "}
+                </Typography>
+              </Box>
+            </Link>
               <div className="menu">
                 <Button
                   aria-controls="simple-menu"
@@ -139,6 +143,16 @@ export default function Navbar() {
                       </MenuItem>
                     </Link>
                   ) : null}
+                  {tipoUser === "admin" ? (
+                    <Link
+                      to="/formularioCategoria"
+                      className="text-decorator-none"
+                    >
+                      <MenuItem onClick={handleClose}>
+                        Atualizar Categoria
+                      </MenuItem>
+                    </Link>
+                  ) : null}
                   <Link to="/postagens" className="text-decorator-none">
                     <MenuItem onClick={handleClose}>Postagens</MenuItem>
                   </Link>
@@ -150,8 +164,19 @@ export default function Navbar() {
                       <MenuItem onClick={handleClose}>Nova Postagem</MenuItem>
                     </Link>
                   ) : null}
+                  {tipoUser === "admin" ? (
+                    <Link
+                      to="/formularioPostagem"
+                      className="text-decorator-none"
+                    >
+                      <MenuItem onClick={handleClose}>Atualizar Postagem</MenuItem>
+                    </Link>
+                  ) : null}
                   <Link to="/quemsomos" className="text-decorator-none">
                     <MenuItem onClick={handleClose}>Sobre Nós</MenuItem>
+                  </Link>
+                  <Link to="/projeto" className="text-decorator-none">
+                    <MenuItem onClick={handleClose}>Projeto</MenuItem>
                   </Link>
                   <MenuItem className="text-decorator-none" onClick={goLogout}>
                     Logout
@@ -172,7 +197,7 @@ export default function Navbar() {
                   <img
                     src="https://i.imgur.com/1ppxRUw.png"
                     alt="Logo da página"
-                    className="img"
+                    className="img-deslogado"
                   />{" "}
                 </Typography>
               </Box>
