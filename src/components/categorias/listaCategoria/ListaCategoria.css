@@ -50,12 +50,14 @@
     flex-wrap: wrap;
     width: 100% !important;
     height: 100vh !important;
+   
 }
 
 .caixa-categorias {
     flex-direction: column !important;
     align-items: center !important;
     width: 25vw;
+    height: 5vh !important;
 }
 
 .categorias {
