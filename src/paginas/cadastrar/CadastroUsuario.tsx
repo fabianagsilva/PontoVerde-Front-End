@@ -71,7 +71,7 @@ function CadastroUsuario() {
 
   return (
     <Grid container direction='row' justifyContent='center' alignItems='center' className="bg-usuario">
-      <Grid item xs={6} alignItems="center">
+      <Grid alignItems="center">
         <Box className='mod-usuario'>
           <Box paddingX={20}>
             <form onSubmit={cadastrar}>
@@ -156,7 +156,7 @@ function CadastroUsuario() {
                     Cancelar
                   </Button>
                 </Link>
-                <Button type="submit" variant="contained" className="btn-concluir">
+                <Button type="submit" variant="contained" className="btn-cad-usu">
                   Cadastrar
                 </Button>
               </Box>
