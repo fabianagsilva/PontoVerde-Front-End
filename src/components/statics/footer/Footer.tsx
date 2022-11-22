@@ -16,23 +16,20 @@ function Footer() {
     if (token !== "") {
         footerComponent = (
             <footer>
-                <Grid className="corfundo"></Grid>
-                            <hr></hr>
                 <Grid className="caixa" item xs={12} >                
                         <Typography>
                             <h2> Equipe </h2>
-                            Ana Paula Nunes <br />
+                            <a href="https://beacons.ai/anapaulanunes" target="_blank"> Ana Paula Nunes </a> <br />
                             Fabiana Gonçalves <br />
                             Flávia Santana <br />
-                            Letícia Silva <br />
-                        </Typography>
-                        
+                            <a href="https://beacons.ai/leticiapaixao" target="_blank"> Letícia Silva </a>                        
+                            </Typography>                        
                     <Grid item xs={2}>
                         <Typography>
                             <h2 className='invisivel'> - </h2>
-                            Lidiane Martins <br />
+                            <a href="https://beacons.ai/thais_severo" target="_blank"> Lidiane Martins </a> <br />
                             Mari Rebecca <br />
-                            Thais Severo <br />
+                            <a href="image.png" target="_blank"> Thais Severo </a> <br />
                         </Typography>
                     </Grid>
 
