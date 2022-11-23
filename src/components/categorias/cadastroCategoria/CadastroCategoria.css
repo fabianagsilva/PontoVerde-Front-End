@@ -7,8 +7,8 @@
 }
 
 .mod-categoria {
-    width: 900px;
-    padding-top: 30px;
+    width: 50vw;
+    padding-top: 50px;
     padding-bottom: 50px;
     border: 3px inset white;
     background: #e8e8e8;
@@ -30,7 +30,7 @@
 .btn-concluir {
     border-radius: 50px !important;
     border: 0 !important;
-    background-color: #004100  !important;
+    background-color: #004100 !important;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px !important;
     text-transform: uppercase !important;
     font-size: 15px !important;
