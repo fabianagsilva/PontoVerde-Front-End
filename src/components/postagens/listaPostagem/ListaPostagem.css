@@ -59,6 +59,10 @@
     margin-left: .5em;
 }
 
+.post-texto {
+    text-align: center !important;
+}
+
 .containerLista {
     display: flex;
     flex-wrap: wrap;
