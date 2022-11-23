@@ -17,6 +17,7 @@ import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
 import store from "./store/store";
 import QuemSomos from "./paginas/quemSomos/QuemSomos";
+import Projeto from "./paginas/projeto/Projeto";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/postagens" element={<ListaPostagem />} />
             <Route path="/categoria" element={<ListaCategoria />} />
             <Route path="/quemsomos" element={<QuemSomos/>}/>
+            <Route path="/projeto" element={<Projeto />} />
             <Route path="/formularioPostagem" element={<CadastroPost />} />
             <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
             <Route

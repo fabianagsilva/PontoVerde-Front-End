@@ -10,11 +10,12 @@
 }
 
 .bg-post {
-    background-color: #083b23;
+    background-color: #D7D8D7;
     width: 100vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+    margin-top: 50px;
 }
 
 .mod-post {

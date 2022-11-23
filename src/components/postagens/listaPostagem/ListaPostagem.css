@@ -1,16 +1,16 @@
 .imagem-post {
     display: block;
-    /* margin-left: 1.8rem;
-    padding: 2rem; */
     padding-bottom: 2rem;
     padding-top: 1rem;
     width: 100%;
 }
 
 .caixa-posts {
+    padding-top: 2rem !important;
     flex-direction: column !important;
     align-items: center !important;
-    width: 25vw;
+    width: 23vw !important;
+    margin-left: 2rem !important;
 }
 
 .div-posts {
@@ -59,13 +59,17 @@
     margin-left: .5em;
 }
 
+.post-texto {
+    text-align: center !important;
+}
+
 .containerLista {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 1rem;
-    width: 96%;
-    margin: 0 auto;
+    width: 100%;
+    background-color: #d7d8d7;
+    margin-top: 80px;
 }
 
 .loader {
@@ -93,12 +97,13 @@
 
 @keyframes rotation {
     0% {
-    transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-    transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-} 
+}
 
 .botao-atualizar {
     /* padding: 17px 40px !important; */
@@ -112,11 +117,12 @@
     transition: all .5s ease !important;
     color: white !important;
 }
+
 .botao-atualizar:hover {
     letter-spacing: 3px !important;
-    background-color: #FF3D00 !important;
+    background-color: #004100 !important;
     color: hsl(0, 0%, 100%) !important;
-    box-shadow: rgb(201, 121, 1) 0px 7px 29px 0px !important;
+    box-shadow: #008400 0px 7px 29px 0px !important;
 }
 
 .botao-deletar {
@@ -134,7 +140,7 @@
 
 .botao-deletar:hover {
     letter-spacing: 3px !important;
-    background-color: #004100 !important;
+    background-color: #FF3D00 !important;
     color: hsl(0, 0%, 100%) !important;
-    box-shadow: #008400 0px 7px 29px 0px !important;
+    box-shadow: rgb(201, 121, 1) 0px 7px 29px 0px !important;
 }

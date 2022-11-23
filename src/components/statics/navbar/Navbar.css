@@ -11,15 +11,17 @@
 }
 
 .text-decorator-none {
-  text-decoration: none;
-}
-
-.text-decorator-none{
-  text-decoration: none;
+  text-decoration: none !important;
   color: black;
 }
 
-.img {
+.img-deslogado {
+  width: 8vw !important;
+  height: 10vh !important;
+  margin-top: 0.2rem;
+}
+
+.img-logado {
   width: 8vw !important;
   height: 10vh !important;
   margin-top: 0.2rem;
@@ -32,11 +34,24 @@
 
 .navbar {
   box-shadow: 0px 1px 11px -8px rgba(0, 0, 0, 0.98) !important;
-  background-color: #d7d8d7 !important;
+  background: rgba(215, 216, 215, 0.275) !important;
+  backdrop-filter: blur(56px);
+  position: fixed !important;
+  margin-bottom: 1rem;
+  z-index: 1030;
+}
+
+.navbar2 {
+  box-shadow: 0px 1px 11px -8px rgba(0, 0, 0, 0.98) !important;
+  background: rgba(215, 216, 215, 0.275) !important;
+  backdrop-filter: blur(56px);
+  position: fixed !important;
+  margin-bottom: 1rem;
+  z-index: 1030;
 }
 
 .menu{
-  margin-left: 84vw;
+  margin-left: 80vw;
 }
 
 .btn-entrar {
@@ -49,6 +64,7 @@
   -webkit-box-shadow: 7px 9px 20px -7px rgba(0, 0, 0, 0.98);
   -moz-box-shadow: 7px 9px 20px -7px rgba(0, 0, 0, 0.98);
   border-radius: 50px !important;
+  text-decoration: none;
 }
 
 .btn-cadastrar {
@@ -62,7 +78,8 @@
   -moz-box-shadow: 7px 9px 20px -7px rgba(0, 0, 0, 0.98);
   border-radius: 50px !important;
   border: 2px solid #083b23 !important;
-  text-decoration: none;
+  text-decoration: none !important;
+ 
 }
 
 .login {

@@ -1,0 +1,23 @@
+.tela{
+    width: 100vw;
+    height: 110vh !important;
+    direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #D7D8D7 !important;
+    
+}
+
+.imgprojeto{
+    width: 30vw;
+    margin-left: 10rem;
+}
+
+.container{
+    display: flex;
+
+}
+
+.resumo{
+    margin-left: 5rem !important;
+}
