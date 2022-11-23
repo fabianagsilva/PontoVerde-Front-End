@@ -74,7 +74,7 @@ return (
                 {/* <Typography variant="body2" component="p">
                     {post.subtitulo}
                 </Typography> */}
-                <Typography variant="body2" component="p">
+                <Typography variant="body2" component="p" className='post-texto'>
                     {post.texto}
                 </Typography>
                 <br />

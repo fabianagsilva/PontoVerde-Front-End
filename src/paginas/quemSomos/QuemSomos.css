@@ -8,6 +8,12 @@
     flex-wrap: wrap;
 }
 
+.separacao{
+    background-color: #083B23;
+    width: 0.4vw;
+    height: 30vh;
+    margin-top: 4rem;
+}
 h4 {
     font-size: 18px;
     font-family: verdana;
@@ -37,7 +43,7 @@ p {
 }
 
 .card {
-    width: 15vw;
+    width: 18vw;
     height: 45vh;
     background: #ffffff;
     border-radius: 10px;
@@ -185,7 +191,7 @@ p {
    .card:hover .img {
     width: 100% !important;
     height: 70% !important;
-    border-radius: 10px 0 0;
+    border-radius: 10px 10px 0 0;
     margin: 0 auto;
     background-color: #f0f0f0;
     z-index: 99999;
@@ -194,7 +200,7 @@ p {
    .card:hover .imgl {
     width: 100% !important;
     height: 70% !important;
-    border-radius: 10px 0 0;
+    border-radius: 10px 10px 0 0;
     margin: 0 auto;
     background-color: #f0f0f0;
     z-index: 99999;
@@ -203,7 +209,7 @@ p {
    .card:hover .imgf {
     width: 100% !important;
     height: 70% !important;
-    border-radius: 10px 0 0;
+    border-radius: 10px 10px 0 0;
     margin: 0 auto;
     background-color: #f0f0f0;
     z-index: 99999;
@@ -212,7 +218,7 @@ p {
    .card:hover .imgm {
     width: 100% !important;
     height: 70% !important;
-    border-radius: 10px 0 0;
+    border-radius: 10px 10px 0 0;
     margin: 0 auto;
     background-color: #f0f0f0;
     z-index: 99999;
@@ -222,7 +228,7 @@ p {
    .card:hover .imgt {
     width: 100% !important;
     height: 70% !important;
-    border-radius: 10px 0 0;
+    border-radius: 10px 10px 0 0;
     margin: 0 auto;
     background-color: #f0f0f0;
     z-index: 99999;
@@ -232,7 +238,7 @@ p {
    .card:hover .imgflavia {
     width: 100% !important;
     height: 70% !important;
-    border-radius: 10px 0 0;
+    border-radius: 10px 10px 0 0;
     margin: 0 auto;
     background-color: #f0f0f0;
     z-index: 99999;
@@ -242,7 +248,7 @@ p {
    .card:hover .imga {
     width: 100% !important;
     height: 70% !important;
-    border-radius: 10px 0 0;
+    border-radius: 10px 10px 0 0;
     margin: 0 auto;
     background-color: #f0f0f0;
     z-index: 99999;
@@ -298,4 +304,45 @@ p {
     bottom: -10px;
     opacity: 100;
     transition: all 0.1s;
+   }
+
+   .container-let{
+    display: flex;
+    justify-content: center;
+   }
+
+
+   .apresentacao-left{
+    margin-top: 5rem;
+    width: 75vw;
+    height: 10vw;
+    margin-left: 1.5rem;
+   }
+
+   .apresentacao-right{
+    margin-top: 5rem;
+    width: 75vw;
+    height: 10vw;
+    margin-right: 1.5rem;
+   }
+
+   .apresentacao-right-fabi{
+    margin-top: 3rem;
+    width: 75vw;
+    height: 10vw;
+    margin-right: 1.5rem;
+   }
+
+   .apresentacao-left-thais{
+    margin-top: 3rem;
+    width: 75vw;
+    height: 10vw;
+    margin-left: 1.5rem;
+   }
+
+   .apresentacao-right-mari{
+    margin-top: 4.5rem;
+    width: 75vw;
+    height: 10vw;
+    margin-right: 1.5rem;
    }

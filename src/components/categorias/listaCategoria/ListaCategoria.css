@@ -1,3 +1,13 @@
+.containerCategoria {
+    margin-top: 80px !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100% !important;
+    margin: 0 auto;
+    background-color: #d7d8d7 !important;
+}
+
 .loader {
     display: inline-block;
     font-size: 48px;
@@ -21,6 +31,15 @@
     animation: rotation 0.6s linear infinite;
 }
 
+@keyframes rotation {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+} 
+
 .text-decorator-none{
     text-decoration: none;
 }
@@ -29,12 +48,16 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100% !important;
+    height: 100vh !important;
+   
 }
 
 .caixa-categorias {
     flex-direction: column !important;
     align-items: center !important;
     width: 25vw;
+    height: 5vh !important;
 }
 
 .categorias {
@@ -42,10 +65,18 @@
     min-height: 200px;
     padding: 0;
     margin: 0;
+    display: flex !important;
+    flex-flow: row wrap !important;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem) !important;
+    overflow: hidden !important;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1) !important;
+    border-radius: 1em !important;
+    background: #ECE9E6 !important;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6) !important;
 }
 
 .titulo-categoria {
-    color: black !important;
+    color: black  !important;
     font-weight: bold !important;
     padding: 10px !important;
 }
