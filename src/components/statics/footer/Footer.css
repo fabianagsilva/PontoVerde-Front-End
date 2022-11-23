@@ -42,3 +42,7 @@ a {
 a:hover {
     color: #076005;
 }
+
+hr {
+    color: black;
+}
