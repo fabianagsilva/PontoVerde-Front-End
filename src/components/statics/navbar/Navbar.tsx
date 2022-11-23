@@ -142,7 +142,7 @@ export default function Navbar() {
                       </MenuItem>
                     </Link>
                   ) : null}
-                  {tipoUser === "admin" ? (
+                  {/* {tipoUser === "admin" ? (
                     <Link
                       to="/formularioCategoria"
                       className="text-decorator-none"
@@ -151,7 +151,7 @@ export default function Navbar() {
                         Atualizar Categoria
                       </MenuItem>
                     </Link>
-                  ) : null}
+                  ) : null} */}
                   <Link to="/postagens" className="text-decorator-none">
                     <MenuItem onClick={handleClose}>Postagens</MenuItem>
                   </Link>
@@ -163,14 +163,14 @@ export default function Navbar() {
                       <MenuItem onClick={handleClose}>Nova Postagem</MenuItem>
                     </Link>
                   ) : null}
-                  {tipoUser === "admin" ? (
+                  {/* {tipoUser === "admin" ? (
                     <Link
                       to="/formularioPostagem"
                       className="text-decorator-none"
                     >
                       <MenuItem onClick={handleClose}>Atualizar Postagem</MenuItem>
                     </Link>
-                  ) : null}
+                  ) : null} */}
                   <Link to="/quemsomos" className="text-decorator-none">
                     <MenuItem onClick={handleClose}>Sobre Nós</MenuItem>
                   </Link>
