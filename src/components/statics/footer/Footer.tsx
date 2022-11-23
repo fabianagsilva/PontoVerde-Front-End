@@ -22,6 +22,7 @@ function Footer() {
                             <a href="https://beacons.ai/anapaulanunes" target="_blank"> Ana Paula Nunes </a> <br />
                             <a href="https://beacons.ai/fabianagsilva" target="_blank"> Fabiana Gonçalves </a> <br />
                             Flávia Santana <br />
+                            </Typography>
                 <hr />
                 <Grid className="caixa" item xs={12} >   
                              
@@ -67,6 +68,7 @@ function Footer() {
                             </Box>
                         </Box>
                     </Grid>
+                </Grid>
                 </Grid>
             </footer >
         )
