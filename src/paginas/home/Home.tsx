@@ -7,6 +7,7 @@ function Home() {
 
     return (
     <>
+    <Box className="separaçao-home"></Box>
         <Grid container justifyContent="center" className="container">
             <Grid alignItems= "center" item xs= {6}>
                 <Box paddingX={8}>

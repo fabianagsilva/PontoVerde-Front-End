@@ -5,7 +5,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import "./Footer.css"
 import { Link } from 'react-router-dom';
 
-function Footer() {
+export default function Footer() {
 
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
@@ -13,7 +13,14 @@ function Footer() {
 
     var footerComponent;
 
-    if (token !== "") {
+
+    if (
+        window.location.pathname === "/login" ||
+        window.location.pathname === "/cadastrar"
+      ) {
+        <></>;
+      } else {
+    if (token !== "" && token != null) {
         footerComponent = (
             <footer>
             <hr />
@@ -63,7 +70,7 @@ function Footer() {
                 </Grid>
             </Grid>
         </footer >
-        )
+        );
     }else{
         footerComponent = (
             <footer>
@@ -114,14 +121,8 @@ function Footer() {
                     </Grid>
                 </Grid>
             </footer >
-        )
-    }
+        );
+    }}
 
-    return (
-        <>
-            {footerComponent}
-        </>
-    )
+    return <>{footerComponent}</>;
 }
-
-export default Footer;

@@ -1,11 +1,16 @@
 .tela{
     width: 100vw;
-    height: 110vh !important;
-    direction: row;
+    display: flex !important;
+    flex-direction: column !important;
     justify-content: center;
     align-items: center;
     background-color: #D7D8D7 !important;
-    
+}
+
+.separaçao{
+    background-color: #D7D8D7 !important;
+    width: 100% !important;
+    height: 20vh !important;
 }
 
 .imgprojeto{
@@ -13,11 +18,51 @@
     margin-left: 10rem;
 }
 
-.container{
-    display: flex;
+.imgprojeto1{
+    width: 23vw;
+    margin-left: 5rem;
+}
 
+.imagem11{
+    margin-top: 6rem !important;
+}
+
+.imagem12{
+    margin-top: 3rem !important;
+}
+
+.imagem13{
+    margin-top: 4rem !important;
+}
+
+.escrito1a{
+    font-size: 4.5rem !important;
+}
+
+.escrito2a{
+    font-size: 1.6rem !important;
+}
+
+.escrito3a{
+    font-size: 1rem !important;
+    font-weight: 200 !important;
+}
+
+.container1{
+    display: flex;
+    margin-bottom: 4rem !important;
+}
+
+.container2{
+    display: flex;
+    margin-bottom: 3rem !important;
 }
 
 .resumo{
     margin-left: 5rem !important;
+}
+
+.resumo1{
+    margin-right: 8rem !important;
+    margin-top: 2rem !important;
 }
