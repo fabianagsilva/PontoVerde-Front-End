@@ -73,6 +73,7 @@ export default function Navbar() {
       progress: undefined,
     });
     navigate("/home");
+    setAnchorEl(null);
   }
 
   var navbarComponent;
