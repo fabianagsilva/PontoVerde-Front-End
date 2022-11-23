@@ -6,12 +6,11 @@
 }
 .container {
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     direction: row;
     justify-content: center;
     align-items: center;
     background-color: #D7D8D7 !important;
-    margin-top: 2rem;
 }
 
 .escrito1 {
@@ -29,10 +28,10 @@
 }
 
 .escrito3 {
-    font-weight: 100 !important;
+    font-weight: 200 !important;
     font-size: 1.1rem !important;
     margin-top: 0.7rem !important;
-    color: #3d3d3d;
+    color: #222222;
 }
 
 .button{

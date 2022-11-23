@@ -188,7 +188,7 @@ export default function Navbar() {
       );
     } else {
       navbarComponent = (
-        <AppBar position="static" className="navbar">
+        <AppBar position="static" className="navbar2">
           <Toolbar variant="dense">
             <Link to="/home">
               <Box className="cursor">
@@ -221,7 +221,7 @@ export default function Navbar() {
                 </Box>
               </Link>
 
-              <Link to="/formularioCategoria" className="text-decorator-none">
+              <Link to="/projeto" className="text-decorator-none">
                 <Box mx={1} className="cursor">
                   <Typography variant="h6" color="inherit">
                     {" "}
