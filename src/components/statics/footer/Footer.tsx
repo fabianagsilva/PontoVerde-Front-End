@@ -104,9 +104,9 @@ export default function Footer() {
                     <Grid >
                         <Typography>
                             <h2> Navegação  </h2>
-                            <Typography> • <Link to="/home" target="_blank">Inicio</Link></Typography>
-                            <Typography> • <Link to="/quemsomos" target="_blank">Quem somos</Link></Typography>
-                            <Typography> • <Link to="/projeto" target="_blank">Projeto</Link></Typography>
+                            <Typography> • <Link to="/home" >Inicio</Link></Typography>
+                            <Typography> • <Link to="/quemsomos" >Quem somos</Link></Typography>
+                            <Typography> • <Link to="/projeto">Projeto</Link></Typography>
                         </Typography>
                     </Grid>
                 </Grid >
