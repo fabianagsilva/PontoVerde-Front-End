@@ -72,7 +72,7 @@ export default function Navbar() {
       theme: "colored",
       progress: undefined,
     });
-    navigate("/login");
+    navigate("/home");
   }
 
   var navbarComponent;

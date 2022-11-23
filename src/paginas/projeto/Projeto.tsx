@@ -48,7 +48,7 @@ function Projeto() {
                 <img src="https://i2.wp.com/codexremote.com.br/home/wp-content/uploads/2020/02/Animacao_Figura_Topo.gif?w=1080&ssl=1" alt="Logo da página" className="imgprojeto"/> 
             </Grid>
         </Grid>
-        
+        <Grid></Grid>
       </Paper>
     </>
   );
