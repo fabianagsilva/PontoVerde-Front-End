@@ -73,7 +73,7 @@ function Footer() {
                         <Typography>
                             <h2> Equipe </h2>
                             <a href="https://beacons.ai/anapaulanunes" target="_blank"> Ana Paula Nunes </a> <br />
-                            Fabiana Gonçalves <br />
+                            <a href="https://beacons.ai/fabianagsilva" target="_blank"> Fabiana Gonçalves </a> <br />
                             <a href="https://beacons.ai/flaviabatista" target="_blank"> Flávia Santana </a> <br />
                             <a href="https://beacons.ai/leticiapaixao" target="_blank"> Letícia Silva </a>                        
                             </Typography>                        
