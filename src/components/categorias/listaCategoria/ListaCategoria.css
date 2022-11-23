@@ -33,14 +33,15 @@
 
 @keyframes rotation {
     0% {
-    transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-    100% {
-    transform: rotate(360deg);
-    }
-} 
 
-.text-decorator-none{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.text-decorator-none {
     text-decoration: none;
 }
 
@@ -50,7 +51,7 @@
     flex-wrap: wrap;
     width: 100% !important;
     height: 100vh !important;
-   
+
 }
 
 .caixa-categorias {
@@ -76,7 +77,7 @@
 }
 
 .titulo-categoria {
-    color: black  !important;
+    color: black !important;
     font-weight: bold !important;
     padding: 10px !important;
 }
@@ -94,9 +95,9 @@
 
 .btn1:hover {
     letter-spacing: 3px !important;
-    background-color: #FF3D00 !important;
+    background-color: #004100 !important;
     color: hsl(0, 0%, 100%) !important;
-    box-shadow: rgb(201, 121, 1) 0px 7px 29px 0px !important;
+    box-shadow: #008400 0px 7px 29px 0px !important;
 }
 
 .btn2 {
@@ -112,7 +113,7 @@
 
 .btn2:hover {
     letter-spacing: 3px !important;
-    background-color: #004100 !important;
+    background-color: #FF3D00 !important;
     color: hsl(0, 0%, 100%) !important;
-    box-shadow: #008400 0px 7px 29px 0px !important;
+    box-shadow: rgb(201, 121, 1) 0px 7px 29px 0px !important;
 }

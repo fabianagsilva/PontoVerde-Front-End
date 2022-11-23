@@ -1,9 +1,8 @@
-import "./QuemSomos.css";
-import React from "react";
 import { Grid, Paper, Typography } from "@material-ui/core";
-import { Box } from "@mui/material";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import { Box } from "@mui/material";
+import "./QuemSomos.css";
 
 function QuemSomos() {
   return (
@@ -16,84 +15,6 @@ function QuemSomos() {
             </Box>
           </Box>
           <Box className="cardsIntegrantes">
-            <Box className="container-let">
-              <Box className="cards">
-                <div className="card">
-                  <div className="blob"></div>
-                  <span className="img"></span>
-                  <h2>
-                    Leticia<br></br>
-                    <span>Silva</span>
-                  </h2>
-                  <h6>Desenvolvedora Full Stack Junior</h6>
-                  <p>
-                    <a href="https://www.linkedin.com/in/silva-leticia/">
-                      <LinkedInIcon className="icon" />
-                    </a>
-                    <a href="https://github.com/lettycodes">
-                      <GitHubIcon className="icon2" />
-                    </a>
-                  </p>
-                </div>
-              </Box>
-              <Box className="separacao"></Box>
-              <Box className="apresentacao-left">
-                <Typography
-                  variant="h6"
-                  gutterBottom
-                  component="h6"
-                  align="left"
-                  className="leticia"
-                >
-                  Olá! Sou a Letícia, fascinada por tecnologia e inovação. Já
-                  tive contato com a programação quando fiz um curso de web
-                  design na minha adolescência mas, como sabemos, a vida não
-                  segue uma linha reta. Após voltar a ter esse contato com a
-                  programação, percebi que as possibilidades nessa área são
-                  infinitas e que além de poder criar aplicações e sistemas
-                  novos, posso resolver problemas. No bootcamp da Generation
-                  estou aprendendo sobre Java, Spring Boot, banco de dados e
-                  JavaScript (com react).
-                </Typography>
-              </Box>
-            </Box>
-
-            <Box className="container-let">
-              <Box className="apresentacao-right">
-                <Typography
-                  variant="h6"
-                  gutterBottom
-                  component="h6"
-                  align="right"
-                  className="resumo"
-                >
-                  Apaixonada por desenvolver soluções para diversos problemas,
-                  por isso estou aqui desenvolvendo para ajudar. Deixar tudo
-                  mais bonito é comigo mesmo, por isso também sou apegada ao
-                  front-end. ♥
-                </Typography>
-              </Box>
-              <Box className="separacao"></Box>
-              <Box className="cards">
-                <div className="card">
-                  <div className="blob"></div>
-                  <span className="imgflavia"></span>
-                  <h2>
-                    Flávia<br></br>
-                    <span>Santana</span>
-                  </h2>
-                  <h6>Desenvolvedora Full Stack Junior</h6>
-                  <p>
-                    <a href="https://www.linkedin.com/in/flaviasantanab/">
-                      <LinkedInIcon className="icon" />
-                    </a>
-                    <a href="https://github.com/flrvia">
-                      <GitHubIcon className="icon2" />
-                    </a>
-                  </p>
-                </div>
-              </Box>
-            </Box>
 
             <Box className="container-let">
               <Box className="cards">
@@ -122,7 +43,6 @@ function QuemSomos() {
                   gutterBottom
                   component="h6"
                   align="left"
-                  className="leticia"
                 >
                   Formada em Administração, buscando novos conhecimentos, novas
                   conquistas e novos desafios para minha carreira profissional e
@@ -136,13 +56,169 @@ function QuemSomos() {
             </Box>
 
             <Box className="container-let">
+              <Box className="apresentacao-right-fabi">
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  component="h6"
+                  align="right"
+                  className="resumo2"
+                >
+                  Em transição de carreira da área da Saúde para TI.
+                  Decidi aprender mais, comecei buscando conhecimento por conta própria, 
+                  conquistei uma oportunidade no bootcamp de Desenvolvimento
+                  Java full stack Jr. da Generation Brasil, onde aprimorei
+                  minhas Soft skills com as sessões de BSM e desenvolvi minhas
+                  Hard skills. Aprendi várias linguagens, metodologias e
+                  ferramentas, tais como: Lógica de programação, Java e Spring
+                  boot para Back-end, MySQL para dados, React, MaterialUI, Html,
+                  CSS e TypeScript para Front-end, bem como versionamento de
+                  código com Git e GitHub, foi assim que descobri minha paixão
+                  pela área. Estou formada e pronta para ingressar no mercado de
+                  trabalho.
+                </Typography>
+              </Box>
+              <Box className="separacao"></Box>
+              <Box className="cards">
+                <div className="card">
+                  <div className="blob"></div>
+                  <span className="imgf"></span>
+                  <h2>
+                    Fabiana<br></br>
+                    <span>Gonçalves</span>
+                  </h2>
+                  <h6>Desenvolvedora Full Stack Junior</h6>
+                  <p>
+                    <a href="https://www.linkedin.com/in/fabianagoncalvessilva/">
+                      <LinkedInIcon className="icon" />
+                    </a>
+                    <a href="https://github.com/fabianagsilva">
+                      <GitHubIcon className="icon2" />
+                    </a>
+                  </p>
+                </div>
+              </Box>
+            </Box>
+
+            <Box className="container-let">
+              <Box className="cards">
+                <div className="card">
+                  <div className="blob"></div>
+                  <span className="imgflavia"></span>
+                  <h2>
+                    Flávia<br></br>
+                    <span>Santana</span>
+                  </h2>
+                  <h6>Desenvolvedora Full Stack Junior</h6>
+                  <p>
+                    <a href="https://www.linkedin.com/in/flaviasantanab/">
+                      <LinkedInIcon className="icon" />
+                    </a>
+                    <a href="https://github.com/flrvia">
+                      <GitHubIcon className="icon2" />
+                    </a>
+                  </p>
+                </div>
+              </Box>
+              <Box className="separacao"></Box>
+              <Box className="apresentacao-left">
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  component="h6"
+                  align="left"
+                >
+                  Apaixonada por desenvolver soluções para diversos problemas,
+                  por isso estou aqui desenvolvendo para ajudar. Deixar tudo
+                  mais bonito é comigo mesmo, por isso também sou apegada ao
+                  front-end. ♥
+                </Typography>
+              </Box>
+            </Box>
+
+            <Box className="container-let">
+              <Box className="apresentacao-right">
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  component="h6"
+                  align="right"
+                >
+                  Olá! Sou a Letícia, fascinada por tecnologia e inovação. Já
+                  tive contato com a programação quando fiz um curso de web
+                  design na minha adolescência mas, como sabemos, a vida não
+                  segue uma linha reta. Após voltar a ter esse contato com a
+                  programação, percebi que as possibilidades nessa área são
+                  infinitas e que além de poder criar aplicações e sistemas
+                  novos, posso resolver problemas. No bootcamp da Generation
+                  estou aprendendo sobre Java, Spring Boot, banco de dados e
+                  JavaScript (com react).
+                </Typography>
+              </Box>
+              <Box className="separacao"></Box>
+              <Box className="cards">
+                <div className="card">
+                  <div className="blob"></div>
+                  <span className="img"></span>
+                  <h2>
+                    Leticia<br></br>
+                    <span>Silva</span>
+                  </h2>
+                  <h6>Desenvolvedora Full Stack Junior</h6>
+                  <p>
+                    <a href="https://www.linkedin.com/in/silva-leticia/">
+                      <LinkedInIcon className="icon" />
+                    </a>
+                    <a href="https://github.com/lettycodes">
+                      <GitHubIcon className="icon2" />
+                    </a>
+                  </p>
+                </div>
+              </Box>
+            </Box>
+
+            <Box className="container-let">
+              <Box className="cards">
+                <div className="card">
+                  <div className="blob"></div>
+                  <span className="imgl"></span>
+                  <h2>
+                    Lidiane<br></br>
+                    <span>Angelo</span>
+                  </h2>
+                  <h6>Desenvolvedora Full Stack Junior</h6>
+                  <p>
+                    <a href="https://www.linkedin.com/in/lidianeangelo/">
+                      <LinkedInIcon className="icon" />
+                    </a>
+                    <a href="https://github.com/Lidianeangelo">
+                      <GitHubIcon className="icon2" />
+                    </a>
+                  </p>
+                </div>
+              </Box>  <Box className="separacao"></Box>
+              <Box className="apresentacao-left">
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  component="h6"
+                  align="left"
+                >
+                  Sou publicitária de formação, atuei no mercado da comunicação desde 2019 em agências e empresas de grande porte.
+                  Atualmente estou realizando minha transição de carreira para a área de TI.
+                  Hoje sou Desenvolvedora Java Full Stack Jr. em formação pelo Generation Brasil, desenvolvo aplicações web utilizando Java,
+                  Javascript, MySQL, HTML, CSS e React. Desde 2019 sou voluntária do grupo de Publicitários Negros.
+                </Typography>
+              </Box>
+            </Box>
+
+            <Box className="container-let">
               <Box className="apresentacao-right-mari">
                 <Typography
                   variant="h6"
                   gutterBottom
                   component="h6"
                   align="right"
-                  className="resumo"
                 >
                   Estudante de Psicologia pela Universidade Anhanguera
                   Institucional e formada em Análise e Desenvolvimento de
@@ -204,7 +280,6 @@ function QuemSomos() {
                   gutterBottom
                   component="h6"
                   align="left"
-                  className="leticia"
                 >
                   Amo artes, design e tudo que envolve criação. Desde criança
                   convivo com jogos e tecnologia, e agora durante a fase adulta,
@@ -221,86 +296,6 @@ function QuemSomos() {
                 </Typography>
               </Box>
             </Box>
-
-            <Box className="container-let">
-              <Box className="apresentacao-right-fabi">
-                <Typography
-                  variant="h6"
-                  gutterBottom
-                  component="h6"
-                  align="right"
-                  className="resumo2"
-                >
-                  Em transição de carreira, cai no mundo do TI, de paraquedas.
-                  Me encantei com a área e decidi aprender mais, comecei
-                  buscando conhecimento por conta própria, me inscrevi e
-                  conquistei uma oportunidade no bootcamp de Desenvolvimento
-                  Java full stack Jr. da Generation Brasil, onde aprimorei
-                  minhas Soft skills com as sessões de BSM e desenvolvi minhas
-                  Hard skills. Aprendi várias linguagens, metodologias e
-                  ferramentas, tais como: Lógica de programação, Java e Spring
-                  boot para Back-end, MySQL para dados, React, MaterialUI, Html,
-                  CSS e TypeScript para Front-end, bem como versionamento de
-                  código com Git e GitHub, foi assim que descobri minha paixão
-                  pela área. Estou formada e pronta para ingressar no mercado de
-                  trabalho e me desenvolver cada vez mais no campo profissional
-                  e pessoal.
-                </Typography>
-              </Box>
-              <Box className="separacao"></Box>
-              <Box className="cards">
-                <div className="card">
-                  <div className="blob"></div>
-                  <span className="imgf"></span>
-                  <h2>
-                    Fabiana<br></br>
-                    <span>Gonçalves</span>
-                  </h2>
-                  <h6>Desenvolvedora Full Stack Junior</h6>
-                  <p>
-                    <a href="https://www.linkedin.com/in/fabianagoncalvessilva/">
-                      <LinkedInIcon className="icon" />
-                    </a>
-                    <a href="https://github.com/fabianagsilva">
-                      <GitHubIcon className="icon2" />
-                    </a>
-                  </p>
-                </div>
-              </Box>
-            </Box>
-
-            <Box className="container-let">
-            <Box className="cards">
-              <div className="card">
-                <div className="blob"></div>
-                <span className="imgl"></span>
-                <h2>
-                  Lidiane<br></br>
-                  <span>Angelo</span>
-                </h2>
-                <h6>Desenvolvedora Full Stack Junior</h6>
-                <p>
-                  <a href="https://www.linkedin.com/in/lidianeangelo/">
-                    <LinkedInIcon className="icon" />
-                  </a>
-                  <a href="https://github.com/Lidianeangelo">
-                    <GitHubIcon className="icon2" />
-                  </a>
-                </p>
-              </div>
-            </Box>  <Box className="separacao"></Box>
-              <Box className="apresentacao-left">
-                <Typography
-                  variant="h6"
-                  gutterBottom
-                  component="h6"
-                  align="left"
-                  className="leticia"
-                >
-                  Sou publicitária de formação, atuei no mercado da comunicação desde 2019 em agências e empresas de grande porte. Atualmente estou realizando minha transição de carreira para a área de TI. Hoje sou Desenvolvedora Java Full Stack Jr. em formação pelo Generation Brasil, desenvolvo aplicações web utilizando Java, Javascript, MySQL, HTML, CSS e React. Desde 2019 sou voluntária do grupo de Publicitários Negros.
-                </Typography>
-              </Box>
-            </Box>          
 
           </Box>
         </Grid>
