@@ -47,7 +47,7 @@ function Footer() {
                     <Typography>
                         <h2> Navegação  </h2>
                         <Typography> • <Link to="/home" target="_blank">Inicio</Link></Typography>
-                        <Typography> • <Link to="/quemsomos" target="_blank">Quem somos</Link></Typography>
+                        <Typography> • <Link to="/quemSomos" target="_blank">Quem somos</Link></Typography>
                         <Typography> • <Link to="/projeto" target="_blank">Projeto</Link></Typography>
                     </Typography>
                 </Grid>
