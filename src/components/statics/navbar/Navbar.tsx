@@ -207,7 +207,7 @@ export default function Navbar() {
                 <Box mx={1} className="cursor">
                   <Typography variant="h6" color="inherit">
                     {" "}
-                    inicio{" "}
+                    Home{" "}
                   </Typography>
                 </Box>
               </Link>
@@ -216,7 +216,7 @@ export default function Navbar() {
                 <Box mx={1} className="cursor">
                   <Typography variant="h6" color="inherit">
                     {" "}
-                    quem somos{" "}
+                    Quem Somos{" "}
                   </Typography>
                 </Box>
               </Link>
@@ -225,7 +225,7 @@ export default function Navbar() {
                 <Box mx={1} className="cursor">
                   <Typography variant="h6" color="inherit">
                     {" "}
-                    projeto{" "}
+                    Projeto{" "}
                   </Typography>
                 </Box>
               </Link>

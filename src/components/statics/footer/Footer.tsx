@@ -30,7 +30,7 @@ function Footer() {
                         <Typography>
                             <h2 className='invisivel'> - </h2>
                             <a href="https://beacons.ai/lidianeangelo" target="_blank"> Lidiane Martins </a> <br />
-                            Mari Rebecca <br />
+                            Mariana Rebecca <br />
                             <a href="https://beacons.ai/thais_severo" target="_blank"> Thais Severo </a> <br />
                         </Typography>
                     </Grid>
