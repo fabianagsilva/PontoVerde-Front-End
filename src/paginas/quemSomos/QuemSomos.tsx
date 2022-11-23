@@ -81,7 +81,7 @@ function QuemSomos() {
                 <div className="blob"></div>
                 <span className="imgm"></span>
                 <h2>
-                  Mari<br></br>
+                  Mariana<br></br>
                   <span>Rebecca</span>
                 </h2>
                 <h6>Desenvolvedora Full Stack Junior</h6>
