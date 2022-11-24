@@ -11,9 +11,7 @@
 
 .botao-sim:hover {
     letter-spacing: 3px !important;
-    background-color: #FF3D00 !important;
-    color: hsl(0, 0%, 100%) !important;
-    box-shadow: rgb(201, 121, 1) 0px 7px 29px 0px !important;
+    box-shadow: #008400 0px 7px 29px 0px !important;
 }
 
 .botao-nao {
@@ -29,13 +27,11 @@
 
 .botao-nao:hover {
     letter-spacing: 3px !important;
-    background-color: #004100 !important;
-    color: hsl(0, 0%, 100%) !important;
-    box-shadow: #008400 0px 7px 29px 0px !important;
+    box-shadow: rgb(201, 121, 1) 0px 7px 29px 0px !important;
 }
 
 .card-deletar {
-    margin: -50vh auto 0 !important; 
+    margin: -50vh auto 0 !important;
     margin-top: 20vh !important;
     position: relative;
     width: 25vw !important;
@@ -50,7 +46,7 @@
     border-radius: 1em !important;
     background: #ECE9E6 !important;
     background: linear-gradient(to right, #FFFFFF, #ECE9E6) !important;
-} 
+}
 
 .texto {
     color: black !important;
