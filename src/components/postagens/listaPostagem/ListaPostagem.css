@@ -120,8 +120,6 @@
 
 .botao-atualizar:hover {
     letter-spacing: 3px !important;
-    background-color: #004100 !important;
-    color: hsl(0, 0%, 100%) !important;
     box-shadow: #008400 0px 7px 29px 0px !important;
 }
 
@@ -140,7 +138,5 @@
 
 .botao-deletar:hover {
     letter-spacing: 3px !important;
-    background-color: #FF3D00 !important;
-    color: hsl(0, 0%, 100%) !important;
     box-shadow: rgb(201, 121, 1) 0px 7px 29px 0px !important;
 }
