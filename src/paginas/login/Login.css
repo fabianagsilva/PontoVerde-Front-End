@@ -16,6 +16,8 @@
     min-height: 100vh; 
     background-size: cover; 
     background-position: center;
+    display:inline-block;
+    overflow-x: hidden
 }
 
 .mod-login {
