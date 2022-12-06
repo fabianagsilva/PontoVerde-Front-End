@@ -128,7 +128,7 @@ export default function Navbar() {
                   onClose={handleClose}
                 >
                   <Link to="/home" className="text-decorator-none">
-                    <MenuItem onClick={handleClose}>Home</MenuItem>
+                    <MenuItem onClick={handleClose}>Início</MenuItem>
                   </Link>
                   <Link to="/categoria" className="text-decorator-none">
                     <MenuItem onClick={handleClose}>Categorias</MenuItem>
@@ -179,7 +179,7 @@ export default function Navbar() {
                     <MenuItem onClick={handleClose}>Projeto</MenuItem>
                   </Link>
                   <MenuItem className="text-decorator-none" onClick={goLogout}>
-                    Logout
+                    Sair
                   </MenuItem>
                 </Menu>
               </div>
