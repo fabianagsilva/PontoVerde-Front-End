@@ -208,7 +208,7 @@ export default function Navbar() {
                 <Box mx={1} className="cursor">
                   <Typography variant="h6" color="inherit">
                     {" "}
-                    Home{" "}
+                    Início{" "}
                   </Typography>
                 </Box>
               </Link>
