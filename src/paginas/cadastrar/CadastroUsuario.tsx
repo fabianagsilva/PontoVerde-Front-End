@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import { ChangeEvent, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import User from "../../models/User";
+import { toast } from "react-toastify";
 import { cadastroUsuario } from "../../services/Service";
 import "./CadastroUsuario.css";
 
@@ -51,12 +52,39 @@ function CadastroUsuario() {
     if (confirmarSenha === user.senha && user.senha.length >= 8) {
       try {
         await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
-        alert("Usuário cadastrado com sucesso!");
+        toast.success("Usuário cadastrado com sucesso!", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
       } catch (error) {
-        alert("Falha interna ao cadastrar!");
+        toast.error("Falha interna ao cadastrar!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
       }
     } else {
-      alert("As senhas não conferem. Tente novamente!");
+      toast.error("As senhas não conferem. Tente novamente!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
       setUser({ ...user, senha: " " });
       setConfirmarSenha(" ");
     }
@@ -151,7 +179,7 @@ function CadastroUsuario() {
               />
 
               <Box marginTop={2} textAlign="center">
-                <Link to="/login" className="text-decorator-none">
+                <Link to="/home" className="text-decorator-none">
                   <Button variant="contained" color="secondary" className="btn-cancelar">
                     Cancelar
                   </Button>
